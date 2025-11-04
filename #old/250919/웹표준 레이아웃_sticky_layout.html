@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>웹표준 레이아웃_sticky_layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      width: 100%;
+      height: 100px;
+      background-color: #ccc;
+      /* position: fixed; */
+      position: sticky;
+      top: 0;
+      left: 0;
+    }
+
+    main {
+      background-color: yellow;
+      height: 4000px;
+      padding-top: 100px;
+    }
+
+    article {
+      width: 500px;
+      height: 300px;
+      background-color: aqua;
+      position: sticky;
+      left: 300px;
+      top: 100px;
+    }
+
+    aside {
+      width: 150px;
+      height: 300px;
+      background-color: bisque;
+      position: sticky;
+      right: 0;
+      top: 500px;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      line-height: 40px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <header>
+    <h1>position(요소의 배치방법)_sticky</h1>
+  </header>
+
+  <main>
+    <p>position: sticky, '끈적 끈적한', '달라붙는'이라는 뜻으로 세로 스크롤시 처음엔 고정으로 배치되어 있다가 부모의 높이나 콘텐츠가 상위로 올라왔을 때 콘텐츠가 동작하도록 하는 요소 배치
+      방법</p>
+    <p>적용 예) 티켓 몬스터 쇼핑몰 상품 상세페이지, cj mall의 오른쪽 사이트 콘텐츠</p>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <article>sticky속성이 적용된 박스요소입니다</article>
+    <aside>sticky속성이 적용된 박스요소입니다</aside>
+  </main>
+
+  <footer>
+    <address>회사주소, 연락처, 담당자 이메일 주소</address>
+    <p>Copyright&copy;2025 사이트명 allrights reserced.</p>
+  </footer>
+</body>
+
+</html>

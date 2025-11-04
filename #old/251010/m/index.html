@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>파스쿠찌 적응형웹-모바일 버전</title>
+  <link rel="stylesheet" href="./css/reset.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css" type="text/css">
+  <link rel="stylesheet" href="./css/common.css" type="text/css">
+</head>
+
+<body>
+  <input type="checkbox" id="toggle">
+  <!-- 헤더 -->
+  <header>
+    <h1>
+      <a href="./index.html" title="메인페이지로 바로가기">
+        <img src="./images/logo.png" alt="로고">
+      </a>
+    </h1>
+
+    <a href="./login.html" title="로그인 하기" class="h_login_btn">
+      <i class="fas fa-user"></i>
+    </a>
+
+    <label for="toggle" class="h_toggle_btn">
+      <i class="fas fa-bars"></i>
+    </label>
+
+    <nav id="gnb">
+      <label for="toggle" class="nav_close_btn">
+        <i class="fas fa-times"></i>
+      </label>
+
+      <form name="search" method="post" action="./search.php">
+        <ul>
+          <li>
+            <fieldset>
+              <legend>검색폼</legend>
+              <p>
+                <input type="search" id="search_box" placeholder="검색어 입력">
+                <label for="search_box"><i class="fas fa-search"></i></label>
+              </p>
+            </fieldset>
+          </li>
+          <li>
+            <a href="#" title="파스쿠찌">PASCUCCI<i class="fas fa-angle-down"></i></a>
+            <ul class="sub">
+              <li>
+                <a href="#" title="">헤리티지</a>
+              </li>
+              <li>
+                <a href="#" title="">브랜드 스토리</a>
+              </li>
+              <li>
+                <a href="#" title="">메뉴 스토리</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" title="공간">SPACE<i class="fas fa-angle-down"></i></a>
+            <ul class="sub">
+              <li>
+                <a href="#" title="">매장타입</a>
+              </li>
+              <li>
+                <a href="#" title="">센트로</a>
+              </li>
+              <li>
+                <a href="#" title="">에스프레소 바</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" title="메뉴">MENU<i class="fas fa-angle-down"></i></a>
+            <ul class="sub">
+              <li>
+                <a href="#" title="">커피</a>
+              </li>
+              <li>
+                <a href="#" title="">음료</a>
+              </li>
+              <li>
+                <a href="#" title="">케이크</a>
+              </li>
+              <li>
+                <a href="#" title="">푸드</a>
+              </li>
+              <li>
+                <a href="#" title="">상품</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" title="뉴스">NEWS<i class="fas fa-angle-down"></i></a>
+            <ul class="sub">
+              <li>
+                <a href="#" title="">공지사항</a>
+              </li>
+              <li>
+                <a href="#" title="">이벤트</a>
+              </li>
+              <li>
+                <a href="#" title="">파스쿠찌 Talk</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" title="스토어">STORE<i class="fas fa-angle-down"></i></a>
+            <ul class="sub">
+              <li>
+                <a href="#" title="">매장안내</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" title="고객">CUSTOMER<i class="fas fa-angle-down"></i></a>
+            <ul class="sub">
+              <li>
+                <a href="#" title="">제휴안내</a>
+              </li>
+              <li>
+                <a href="#" title="">자주하는질문</a>
+              </li>
+              <li>
+                <a href="#" title="">1:1문의하기</a>
+              </li>
+              <li>
+                <a href="#" title="">채용안내</a>
+              </li>
+              <li>
+                <a href="#" title="">가맹사업안내</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </form>
+
+      <div class="sns">
+        <ul>
+          <li>
+            <a href="#" title="인스타그램">
+              <img src="./images/sns_insta.png" alt="인스타그램">
+            </a>
+          </li>
+          <li>
+            <a href="#" title="유튜브">
+              <img src="./images/sns_youtube.png" alt="유튜브">
+            </a>
+          </li>
+          <li>
+            <a href="#" title="해피콘">
+              <img src="./images/sns_happy.png" alt="해피콘">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 메인 -->
+  <main></main>
+
+  <!-- 푸터 -->
+  <footer>
+    <a href="../index.html" title="PC버전 보기">PC버전 보기</a>
+    <dl>
+      <dt>고객 상담센터</dt>
+      <dd><a href="tel:000-0000-0000">000-0000-0000</a></dd>
+    </dl>
+    <select>
+      <option value="">Family Site</option>
+      <option value="https://www.paris.co.kr/">파리바게뜨</option>
+      <option value="https://www.dunkindonuts.co.kr/">던컨도너츠</option>
+      <option value="https://www.baskinrobbins.co.kr/">베스킨라빈스</option>
+      <option value="http://www.shakeshack.kr/">쉐이크쉑</option>
+    </select>
+  </footer>
+
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

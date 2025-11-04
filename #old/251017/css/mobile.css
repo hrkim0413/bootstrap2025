@@ -1,0 +1,210 @@
+@media screen and (max-width: 767px) {
+
+  /* common */
+  header .header_inner,
+  .gnb_wrap .gnb,
+  footer .f_inner {
+    width: 100%;
+  }
+
+  /* header */
+  header {
+    height: auto;
+  }
+
+  header .header_inner {
+    height: 70px;
+    background: #fff;
+    box-shadow: 0 0 3px rgba(63, 63, 63);
+  }
+
+  header h1 {
+    width: 100%;
+    text-align: center;
+    transform: none;
+    padding-top: 10px;
+  }
+
+  header h1 a img {
+    width: 130px;
+  }
+
+  header #t_btn,
+  header #m_search {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 5px;
+    font-size: 2rem;
+  }
+
+  header #t_btn {
+    left: 10px;
+  }
+
+  header #m_search {
+    right: 10px;
+  }
+
+  /* gnb */
+  .gnb_wrap {
+    /* height: 100%; */
+    height: 0 !important;
+  }
+
+  .gnb_wrap .gnb {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 100;
+    flex-direction: column;
+    transition: 0.5s;
+    padding-top: 120px;
+  }
+
+  .gnb_wrap .gnb:hover {
+    height: 100%;
+  }
+
+  .gnb_wrap .gnb>li {
+    text-align-last: left;
+    border-bottom: 1px solid #fff;
+  }
+
+  .gnb_wrap .gnb>li>a {
+    font-size: 0.9rem;
+    color: #fff;
+  }
+
+  .gnb_wrap .gnb>li>a::after {
+    display: none;
+  }
+
+  .gnb_wrap .gnb li a .fas {
+    display: inline;
+    float: right;
+    margin-top: 10px;
+    font-size: 1.3rem;
+  }
+
+  .gnb_wrap .gnb>li .sub {
+    display: none;
+  }
+
+  .gnb_wrap label[for="toggle_btn"] {
+    display: block;
+    position: fixed;
+    top: 30px;
+    right: 100%;
+    z-index: 200;
+    font-size: 2rem;
+    color: #fff;
+    transition: 0.5s;
+  }
+
+  header .lnb {
+    top: auto;
+    right: auto;
+    position: fixed;
+    left: -100%;
+    top: 400px;
+    width: 100%;
+    transition: 0.5s;
+    z-index: 1000;
+  }
+
+  header .lnb ul {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 0;
+  }
+
+  header .lnb ul li {
+    display: inline-block;
+    width: 48%;
+    background-color: #ccc;
+    margin-right: 5px;
+    text-align: center;
+  }
+
+  header .lnb ul li a {
+    display: block;
+    line-height: 300%;
+    color: #fff;
+    border-right: none;
+  }
+
+  header .lnb ul li a:hover {
+    text-decoration: none;
+  }
+
+  header #sh {
+    position: absolute;
+    /* top: 50px; */
+    top: -480px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    z-index: 1000;
+    width: 250px;
+    height: 36px;
+  }
+
+  header #sh+label {
+    right: auto;
+    transform: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 150px;
+    /* top: 56px; */
+    top: -476px;
+    z-index: 10001;
+  }
+
+  header #sh+label i {
+    color: #fff;
+    font-size: 1.6rem;
+  }
+
+  /* gnb 나오게 하기 */
+  #toggle_btn:checked+header .gnb_wrap .gnb {
+    left: 0;
+  }
+
+  #toggle_btn:checked+header .gnb_wrap label[for="toggle_btn"] {
+    right: 5%;
+  }
+
+  #toggle_btn:checked+header .lnb {
+    left: 0;
+  }
+
+  /* footer */
+  footer {
+    background-color: #fff;
+    font-size: 0.8rem;
+  }
+
+  footer .f_lnb ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  footer .f_lnb ul li {
+    line-height: 230%;
+  }
+
+  footer .sns ul {
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  footer address {
+    text-align: center;
+  }
+}

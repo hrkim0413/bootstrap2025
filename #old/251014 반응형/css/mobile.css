@@ -1,0 +1,11 @@
+@media screen and (max-width: 767px) {
+
+  /* mobile 해상도(767px 이하)일 경우 배경색 하늘 */
+  body {
+    background-color: skyblue;
+  }
+
+  #m_search {
+    display: block;
+  }
+}

@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+/* pc, tablet, mobile 공통서식 */
+body {
+  font-family: "Nanum Gothic", '맑은 고딕', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.81rem;
+  /* 0.81rem = 81% = 13px */
+  color: #333;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+header #m_search {
+  display: none;
+}

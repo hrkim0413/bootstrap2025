@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01-sass문법_믹싱기법을 활용한 모바일 토글버튼 구현하기</title>
+  <link rel="stylesheet" href="./css/sass_mixin.css">
+</head>
+
+<body>
+  <h2>01-sass문법_믹싱기법을 활용한 모바일 토글버튼 구현하기</h2>
+  <p>모바일 토글버튼(전체메뉴)을 html태그로 작성하여 클릭시 'X'로 변경하고, 'X' 클릭시 토글모양으로 다시 변경되게 하기</p>
+  <dl>
+    <dt>구현하기</dt>
+    <dd>1. css로 버튼 구현하기</dd>
+    <dd>2. javascript로 버튼 구현하기</dd>
+  </dl>
+
+  <h3>1. css로 모바일 토글버튼 구현</h3>
+  <div class="navi">
+    <input type="checkbox" id="toggle">
+    <label for="toggle" class="toggle_btn">
+      <span class="bar bar1"></span>
+      <span class="bar bar2"></span>
+      <span class="bar bar3"></span>
+    </label>
+  </div>
+
+  <h3>2. javascript로 모바일 토글버튼 구현</h3>
+  <div class="navi navi-js">
+    <div class="toggle_btn">
+      <span class="bar bar1"></span>
+      <span class="bar bar2"></span>
+      <span class="bar bar3"></span>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const t_btn = document.querySelector('.navi-js .toggle_btn')
+      const navi1 = document.querySelector('.navi-js .bar1');
+      const navi2 = document.querySelector('.navi-js .bar2');
+      const navi3 = document.querySelector('.navi-js .bar3');
+
+      t_btn.addEventListener('click', function () {
+        navi1.classList.toggle('rotate1');
+        navi2.classList.toggle('none');
+        navi3.classList.toggle('rotate2');
+      })
+    })
+  </script>
+</body>
+
+</html>

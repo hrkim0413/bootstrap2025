@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01-그리드 레이아웃</title>
+  <style>
+    /* 실습1 */
+    #g_wrap {
+      background-color: #333;
+      padding: 10px;
+      width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-gap: 10px;
+      /* grid-template-columns: 600px 300px 300px; */
+      /*열 배분은 동일하게 나누기*/
+      grid-template-columns: repeat(3, auto);
+      /* grid-template-rows: 40px 50px 60px 70px; */
+      grid-template-rows: repeat(4, 60px);
+      /* auto는 자동으로 크기를 설정하기 위한 속성값 */
+      /* repaeat함수를 사용하여 60픽셀은 3번 반복한다 */
+    }
+
+    #g_wrap article {
+      background-color: #ccc;
+      line-height: 60px;
+      text-align: center;
+    }
+
+    /* 실습2 */
+    #g_wrap2 {
+      width: 800px;
+      background-color: yellow;
+      padding: 10px;
+      margin: 0 auto;
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: repeat(3, auto);
+      grid-template-rows: repeat(4, 60px);
+    }
+
+    #g_wrap2 article {
+      background-color: green;
+      line-height: 50px;
+    }
+
+    #g_wrap2 .i01 {
+      /* 행번호 열번호 입력 grid-area: 시작 행번호/시작열 번호/끝 행번호/끝 열번호 */
+      grid-area: 1/1/2/3;
+    }
+
+    #g_wrap2 .i05 {
+      grid-area: 2/2/4/3;
+    }
+
+    #g_wrap2 .i10 {
+      grid-area: 4/1/5/4;
+    }
+
+    /* 실습3 */
+    #g_wrap3 {
+      width: 1200px;
+      margin: 0 auto;
+      padding: 10px;
+      background-color: #333;
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: repeat(4, auto);
+      grid-template-rows: repeat(4, 150px);
+    }
+
+    #g_wrap3 article {
+      /* background-color: #fff; */
+      overflow: hidden;
+    }
+
+    #g_wrap3 .i01 {
+      /* grid-row: 1/3;
+      grid-column: 1/3; */
+      grid-area: 1/1/3/3;
+    }
+
+    #g_wrap3 .i03 {
+      grid-column: 3/5;
+    }
+
+    #g_wrap3 .i08 {
+      grid-row: 2/5;
+    }
+
+    #g_wrap3 .i09 {
+      /* grid-row: 3/5;
+      grid-column: 1/2; */
+      grid-area: 3/1/5/2;
+    }
+
+    #g_wrap3 .i10 {
+      /* grid-row: 3/5;
+      grid-column: 2/4; */
+      grid-area: 3/2/5/4;
+    }
+
+    #g_wrap3 article img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(0) brightness(0.9);
+      transition: 0.3s;
+    }
+
+    #g_wrap3 article img:hover {
+      filter: none;
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+
+<body>
+  <h2>01-그리드 레이아웃</h2>
+  <p>grid(격자)속성은 flex(플렉스, 가로, 세로, 1차원)속성과는 다르게 두 방향(가로, 세로=2차원)으로 레이아웃을 만들기 위한 시스템이다.</p>
+
+  <h3>웹페이지 레이아웃 제작방법</h3>
+  <ul>
+    <li>table - 표, 달력, 게시판, 공지사항, 질문과 답변 테이블...</li>
+    <li>float : left, right</li>
+    <li>display : inline</li>
+    <li>display : inline-block</li>
+    <li>display : block</li>
+    <li>display : table</li>
+    <li>display : flex(1차원, 가로/세로방향 하나만 선택 가능)</li>
+    <li>display : grid(2차원, 가로/세로축 동시에 가능)</li>
+    <li>다단 레이아웃</li>
+  </ul>
+
+  <h3>1. grid column(열, 세로)</h3>
+  <img src="./images/column.png" alt="세로">
+
+  <h3>2. grid row(행, 가로)</h3>
+  <img src="./images/row.png" alt="가로">
+
+  <h3>3. grid gap(여백)</h3>
+  <img src="./images/gap.png" alt="여백">
+
+  <h3>4. grid line(기준선)</h3>
+  <img src="./images/line.png" alt="라인">
+
+  <h3>5. grid Container(부모속성)</h3>
+  <p>grid layout에서 부모역할을 하기 위한 html태그요소이며 display:grid, display:inline-grid속성 값을 지정할 수 있다.</p>
+  <p>부모요소의 이름은 'wrap, wrapper, container', 자식요소의 이름은 'item'이라고 하며, 그리드는 'column', 'row'아이템으로 구성된다.</p>
+  <ul>
+    <li>display: grid, display: inline-grid : 부모요소에 그리드 속성 적용</li>
+    <li>grid-template-columns : 세로방향으로 나누고자 할 경우 적용하는 속성으로 개수를 지정</li>
+    <li>grid-template-rows : 가로방향으로 나누고자 할 경우 적용하는 속성으로 개수를 지정</li>
+    <li>grid-template : 행과 열을 한꺼번에 나누고자 할 경우 적용하는 속성</li>
+    <li>grid-template-area : 영역의 이름으로 지정하고자 할 경우 적용하는 속성</li>
+    <li>grid-gap, grid-column-gap, grid-row-gap : 행과 열 사이 간격 설정</li>
+    <li>justify-items, align-items, place-items</li>
+    <li>justify-content, align-content, place-content</li>
+    <li>grid-auto-rows, grid-auto-column, grid-auto-flow</li>
+  </ul>
+
+  <h3>6. grid Item(자식에 적용하는 속성들)</h3>
+  <p>grid레이아웃에서 부모요소의 자식요소들은 '아이템'이라고 하며, 아이템들을 병합하고자 할 때, 열, 행번호, 영역의 이름을 따로 지정하여 설정 할 수 있다.</p>
+  <ul>
+    <li>grid-column : item의 열 시작위치 번호와 끝번호를 지정하여 병합하고자 할 때 사용. 예)1/5</li>
+    <li>grid-row : item의 행 시작위치 번호와 끝번호를 지정하여 병합하고자 할 때 사용. 예)1/3</li>
+    <li>grid-column, grid-row속성은 각각 grid-column-start, grid-column-end, grid-row-start, grid-row-end속성으로도 사용 가능</li>
+    <li>grid-row-start, grid-row-end</li>
+    <li>grid-column, grid-row</li>
+    <li>grid-area</li>
+    <li>justify-self, align-self, place, self</li>
+  </ul>
+  <p>css학습 참고사이트 - https:www.w3schools.com/css/css_grid.asp</p>
+
+  <h3>실습1. 그리드 레이아웃 기본 개념잡기</h3>
+  <section id="g_wrap">
+    <article>item1</article>
+    <article>item2</article>
+    <article>item3</article>
+    <article>item4</article>
+    <article>item5</article>
+    <article>item6</article>
+    <article>item7</article>
+    <article>item8</article>
+    <article>item9</article>
+    <article>item10</article>
+    <article>item11</article>
+    <article>item12</article>
+  </section>
+
+  <h3>실습2. 그리드 레이아웃 자식요소들 병합하기</h3>
+  <section id="g_wrap2">
+    <article class="i01">item1</article>
+    <!-- <article>item2</article> -->
+    <article>item3</article>
+    <article>item4</article>
+    <article class="i05">item5</article>
+    <article>item6</article>
+    <article>item7</article>
+    <!-- <article>item8</article> -->
+    <article>item9</article>
+    <article class="i10">item10</article>
+    <!-- <article>item11</article>
+    <article>item12</article> -->
+  </section>
+
+  <h3>실습3. </h3>
+  <section id="g_wrap3">
+    <article class="i01">
+      <img src="./실습예제01/images/cat-5628953_1920.jpg" alt="">
+    </article>
+    <!-- <article>item2</article> -->
+    <article class="i03">
+      <img src="./실습예제01/images/house-5651866_1920.jpg" alt="">
+    </article>
+    <!-- <article>item4</article> -->
+    <!-- <article>item5</article> -->
+    <!-- <article>item6</article> -->
+    <article><img src="./실습예제01/images/landscape-5561687_1920.jpg" alt="">
+    </article>
+    <article class="i08">
+      <img src="./실습예제01/images/pexels-photo-5076309.jpeg" alt="">
+    </article>
+    <article class="i09">
+      <img src="./실습예제01/images/santorini-5655111_1920.jpg" alt="">
+    </article>
+    <article class="i10">
+      <img src="./실습예제01/images/shoes-434918_1920.jpg" alt="">
+    </article>
+    <!-- <article>item11</article> -->
+    <!-- <article>item12</article> -->
+    <!-- <article>item13</article> -->
+    <!-- <article>item14</article> -->
+    <!-- <article>item15</article> -->
+    <!-- <article>item16</article> -->
+  </section>
+
+  <p>
+    repaeat(4, auto) => repeat(4, 1fr)
+    1fr은 'available space의 1등분'을 의미
+  </p>
+  <p>fr이란 유연한 크기를 갖는 단위로서 그리드 컨테이너 내의 공간 비율을 분수(fraction)로 나타내는 단위</p>
+  <ul>
+    <li>auto 100px 1fr 1fr;</li>
+    <li>auto 100px 2fr;</li>
+    <li>auto 3fr;</li>
+    <li>150px 2fr</li>
+    <li>100px 1fr 2fr;</li>
+  </ul>
+</body>
+
+</html>

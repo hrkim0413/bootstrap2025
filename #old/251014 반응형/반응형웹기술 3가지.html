@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반응형웹기술 3가지</title>
+  <style>
+    .box{
+      font-size:2em; /* 16*2 = 32px */
+    }
+    .box > p{font-size:1.5em; /* 16*1.5 = 22px    32*1.5배 = 48px */}
+
+    /* em단위는 항상 상위요소의 부모 크기를 상속받아 크기가 결정되기 때문에 크기 설정시 주의해야 */
+    /* root의 약자인 rem 단위를 사용하면 부모크기를 신경안써도 된다. */
+    .box{font-size:3em;}
+    .box > p{font-size:1.5rem; /* 16px * 1.5배 = 24px */}
+
+  </style>
+</head>
+<body>
+  <h2>반응형 웹기술 3가지</h2>
+  <p>반응형 웹을 구현하기 위해서는 1. 가변크기단위, 2. 뷰포트 속성, 3. 가로해상도별 서식을 적용하기 위한 '미디어쿼리'속성이 사용된다.</p>
+  <p>반응형 홈페이지 카테고리별 참고 사이트 '디비컷', '노트폴리오', '지디웹'을 참고.</p>
+
+  <h3>1. 가변단위 - em, rem, vh, vw, vmin, vmax, %</h3>
+  <ul>
+    <li>em - 부모요소의 font-size를 상속받아 크기가 결정되는 단위.</li>
+    <li>rem - root의 약자로서 부모의 font-size를 상속받지 않고 최상위(html)요소에서 설정된 font-size를 기준으로 크기가 결정되는 상대단위. 16px = 1em, 1rem</li>
+    <li>vh - vertical height의 약자로서 웹브라우저의 높이를 100으로 기준 설정하고 크기가 결정됨.</li>
+    <li>vw - vertical width의 약자로서 웹브라우저의 가로너비를 100으로 기준 설정하고 크기가 결정됨.</li>
+    <li>vmin - 높이와 너비중 짧은 쪽으로 100으로 기준설정하여 크기가 결정됨</li>
+    <li>vmax - 높이와 너비중 긴쪽을 100으로 기준설정하여 크기가 결정됨</li>
+    <li>% - 부모요소를 기준으로 비율을 표현하는 단위.(반응형에서 주소 많이 사용)</li>
+  </ul>
+
+  <div class="box">
+    가변 글자 크기
+    <p>p : 가변 글자 크기</p>
+  </div>
+
+  <h3>2. 뷰포트 속성</h3>
+  <p>사용자의 디바이스 화면크기(pc, tablet, mobile)에 맞추어 웹문서를 100%로 보여 줄 수 있는 속성으로서 pc보다 태블릿이나 모바일 사용자를 위해서 필요하다.</p>
+  <p>html head영역에 다음과 같이 작성한다. => meta name="viewport" content="width=device-width, initial-scale=1"</p>
+
+  <h3>3. 미디어쿼리(mediaquery) 속성</h3>
+  <p>사용자의 브라우저 가로너비(해상도)에 따라 또는 사용자의 디스플레이 가로 해상도에 따른 css를 적용하기 위한 기술로서 반응형 웹 제작시 필수 기술이다.</p>
+  <p>pc, tablet, mobile 디바이스별 가로 해상도를 설정하여 작성하기 때문에 해상도 개념에 대한 이해가 필요하다.</p>
+  <p>작성법) @media screen ans (가로너비 해상도값) {적용할 css속성:값;}</p>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+/* base.css 기본 공통서식 */
+/* 
+  글자 모양, 글자 크기, 글자 색상
+  링크 스타일
+  기타 버튼 스타일
+  input 양식 스타일
+*/
+
+:root {
+  /* 기본 텍스트 컬러 */
+  --txt_base_color: #333;
+}
+
+body {
+  font-family: "맑은 고딕", Arial, sans-serif;
+  font-size: 12px;
+  color: var(--txt_base_color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--txt_base_color);
+}

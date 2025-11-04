@@ -1,0 +1,54 @@
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  header #t_btn {
+    display: block;
+    position: absolute;
+    top: 64px;
+    right: 10px;
+    z-index: 1000;
+    font-size: 2rem;
+  }
+
+  /* common */
+  header .header_inner,
+  .gnb_wrap .gnb,
+  footer .f_inner {
+    width: 100%;
+  }
+
+  /* header */
+  header h1 {
+    position: relative;
+    z-index: 1000;
+  }
+
+  /* gnb */
+  .gnb_wrap {
+    top: 60px;
+  }
+
+  .gnb_wrap .gnb {
+    width: 86%;
+    margin-right: 5%;
+  }
+
+  .gnb_wrap .gnb>li {
+    margin: 0 2%;
+  }
+
+  /* footer */
+  footer {
+    padding-top: 40px;
+  }
+
+  footer .f_lnb ul li {
+    margin: 0 1%;
+  }
+
+  .sns {
+    margin-right: 2.8%;
+  }
+
+  footer address p {
+    text-indent: 10px;
+  }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실습하기_회원가입</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <style>
+    body {
+      height: 100vh;
+    }
+
+    form {
+      width: 600px;
+    }
+  </style>
+</head>
+
+<body class="d-flex justify-content-center align-items-center bg-primary">
+  <form action="./join.php" name="join" method="post" class="bg-white p-4 rounded">
+    <fieldset>
+      <legend class="mb-3">회원가입</legend>
+
+      <div class="top border-bottom">
+        <div class="d-flex justify-content-between gap-3 my-3">
+          <div class="w-100">
+            <label for="name" class="mb-1">이름</label>
+            <input type="text" id="name" class="form-control" maxlength="10">
+          </div>
+
+          <div class="w-100">
+            <label for="alias" class="mb-1">별명</label>
+            <input type="text" id="alias" class="form-control" maxlength="10">
+          </div>
+        </div>
+
+        <div class="my-3">
+          <label for="email" class="mb-1">이메일</label>
+          <input type="email" id="email" placeholder="you@example.com" class="form-control">
+        </div>
+
+        <div class="my-3">
+          <label for="address1" class="mb-1">주소</label>
+          <input type="text" id="address1" placeholder="서울특별시 강남구" class="form-control">
+        </div>
+
+        <div class="my-3">
+          <label for="address2" class="mb-1">상세주소<span class="form-text mx-1">(필수 아님)</span></label>
+          <input type="text" id="address2" placeholder="상세주소를 입력해주세요" class="form-control">
+        </div>
+
+        <div class="d-flex justify-content-between gap-3 my-3">
+          <div class="w-75">
+            <label for="channel" class="mb-1">가입경로</label>
+            <select id="channel" class="form-select">
+              <option value="">가입경로</option>
+              <option value="">가입경로1</option>
+              <option value="">가입경로2</option>
+              <option value="">가입경로3</option>
+            </select>
+          </div>
+
+          <div class="w-25">
+            <label for="code" class="mb-1">추천인코드</label>
+            <input type="text" id="code" class="form-control" maxlength="10">
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom">
+        <div class="my-3">
+          <input type="checkbox" id="ck" class="form-check-input">
+          <label for="ck" class="form-check-label">개인정보 수집 및 이용에 동의합니다</label>
+        </div>
+
+        <div class="text-center">
+          <input type="submit" value="가입 완료" class="btn btn-primary">
+          <input type="reset" value="가입 취소" class="btn btn-danger">
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</body>
+
+</html>

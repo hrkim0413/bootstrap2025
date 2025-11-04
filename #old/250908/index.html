@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>써브웨이 홈페이지에 오신 것을 환영합니다.</title>
+  <!-- 1. 여백 초기화 -->
+  <link rel="stylesheet" href="./css/reset.css" type="text/css">
+  <!-- 2. 레이아웃 서식 -->
+  <link rel="stylesheet" href="./css/layout.css" type="text/css">
+</head>
+
+<body>
+  <input type="checkbox" id="toggle_btn">
+
+  <!-- 1. 상단 헤더 -->
+  <header>
+    <h1>
+      <a href="./index.html" title="메인 페이지로 바로가기">
+        <img src="./images/logo 1.png" alt="상단 로고">
+      </a>
+    </h1>
+
+    <!-- 내비게이션 -->
+    <!-- 왼쪽 토글 버튼 -->
+    <label for="toggle_btn">
+      <img src="./images/toggle.png" alt="전체 메뉴">
+    </label>
+
+    <!-- 오른쪽 장바구니 버튼 -->
+    <a href="./cart.html" title="장바구니 페이지로 이동하기" class="cart_btn">
+      <img src="./images/cart.png" alt="장바구니">
+    </a>
+  </header>
+
+  <!-- 2. 메인 콘텐츠 -->
+  <main>
+    <article class="slide">
+      <h2>메인 슬라이드 이미지</h2>
+      <a href="#" title="페이지로 이동하기">
+        <img src="./images/main_banner 1.png" alt="메인">
+      </a>
+    </article>
+  </main>
+
+  <!-- 3. 하단 푸터 -->
+  <footer>
+    <nav>
+      <ul>
+        <li>
+          <a href="#" title="매장선주문">
+            <img src="./images/order 1.png" alt="">
+            매장선주문
+          </a>
+        </li>
+        <li>
+          <a href="#" title="배달주문">
+            <img src="./images/deli 1.png" alt="">
+            배달주문
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+
+</html>

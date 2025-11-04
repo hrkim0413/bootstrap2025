@@ -1,0 +1,137 @@
+$b_color: #333;
+$f_color: #f00;
+$time: 0.3s;
+
+// 실습1
+@mixin sns {
+  font-size: 30px;
+  color: $b_color;
+  transition: $time;
+}
+
+@mixin hover {
+  color: $f_color;
+}
+
+.sns {
+  display: flex;
+  justify-content: space-around;
+  width: 200px;
+
+  li {
+    list-style: none;
+    @include sns();
+
+    &:hover {
+      @include hover();
+      transform: translateY(-5px);
+    }
+  }
+}
+
+// 실습2
+@mixin btn {
+  width: 200px;
+  height: 40px;
+  border: 1px solid #ccc;
+  text-align: center;
+  color: $b_color;
+}
+
+@mixin bgcolor($bgcolor) {
+  background: $bgcolor;
+}
+
+.btn {
+  @include btn();
+
+  &1 {
+    @include bgcolor(#f00)
+  }
+
+  &2 {
+    @include bgcolor(#0f0)
+  }
+
+  &3 {
+    @include bgcolor(#ff0)
+  }
+}
+
+// 실습3
+@mixin border_style($w: 1px, $s: solid, $c: #ccc) {
+  border: $w $s $c;
+}
+
+.list01 {
+  li {
+    @include border_style();
+
+    &:nth-child(2) {
+      @include border_style(3px, solid, #f00);
+    }
+
+    &:nth-child(3) {
+      @include border_style(4px, double, #00f);
+    }
+
+    &:nth-child(4) {
+      @include border_style(4px, dotted, #0f0);
+    }
+
+    &:nth-child(5) {
+      @include border_style(4px, dashed, orange);
+    }
+
+    &:hover {
+      @include border_style($w: 3px, $c: #000);
+    }
+  }
+}
+
+// 실습4
+@mixin border($w: 1px, $s: solid, $c: #ccc) {
+  border: $w $s $c;
+}
+
+@mixin t_caption($gb: #ff0) {
+  background: $gb;
+  padding: 10px 0;
+  font-weight: bold;
+}
+
+@mixin odd_tr($bg: #fddc7a) {
+  background: $bg;
+}
+
+@mixin even_tr($bg: #fdeab2) {
+  background: $bg;
+}
+
+$t_width: 500px;
+
+.calendar {
+  width: $t_width;
+  border-collapse: collapse;
+  @include border();
+
+  caption {
+    @include t_caption();
+  }
+
+  tr {
+
+    &:nth-child(odd) {
+      @include odd_tr();
+    }
+
+    &:nth-child(even) {
+      @include even_tr();
+    }
+
+    th,
+    td {
+      @include border();
+    }
+  }
+}

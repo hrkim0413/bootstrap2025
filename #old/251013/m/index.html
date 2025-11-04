@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>파스쿠찌 적응형웹-모바일 버전</title>
+  <link rel="shortcut icon" type="image/x-icon" href="../images/favi.png">
+  <link rel="stylesheet" href="./css/reset.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css" type="text/css">
+  <link rel="stylesheet" href="./css/common.css" type="text/css">
+  <link rel="stylesheet" href="./css/main.css" type="text/css">
+</head>
+
+<body>
+  <input type="checkbox" id="toggle">
+  <!-- 헤더 -->
+  <header>
+    <h1>
+      <a href="./index.html" title="메인페이지로 바로가기">
+        <img src="./images/logo.png" alt="로고">
+      </a>
+    </h1>
+
+    <a href="./login.html" title="로그인 하기" class="h_login_btn">
+      <i class="fas fa-user"></i>
+    </a>
+
+    <label for="toggle" class="h_toggle_btn">
+      <i class="fas fa-bars"></i>
+    </label>
+
+    <nav id="gnb">
+      <label for="toggle" class="nav_close_btn">
+        <i class="fas fa-times"></i>
+      </label>
+
+      <form name="search" method="post" action="./search.php">
+        <ul>
+          <li>
+            <fieldset>
+              <legend>검색폼</legend>
+              <p>
+                <input type="search" id="search_box" placeholder="검색어 입력">
+                <label for="search_box"><i class="fas fa-search"></i></label>
+              </p>
+            </fieldset>
+          </li>
+          <li>
+            <a href="#" title="파스쿠찌">PASCUCCI<i class="fas fa-angle-down"></i></a>
+            <ul class="sub">
+              <li>
+                <a href="#" title="">헤리티지</a>
+              </li>
+              <li>
+                <a href="#" title="">브랜드 스토리</a>
+              </li>
+              <li>
+                <a href="#" title="">메뉴 스토리</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" title="공간">SPACE<i class="fas fa-angle-down"></i></a>
+            <ul class="sub">
+              <li>
+                <a href="#" title="">매장타입</a>
+              </li>
+              <li>
+                <a href="#" title="">센트로</a>
+              </li>
+              <li>
+                <a href="#" title="">에스프레소 바</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" title="메뉴">MENU<i class="fas fa-angle-down"></i></a>
+            <ul class="sub">
+              <li>
+                <a href="#" title="">커피</a>
+              </li>
+              <li>
+                <a href="#" title="">음료</a>
+              </li>
+              <li>
+                <a href="#" title="">케이크</a>
+              </li>
+              <li>
+                <a href="#" title="">푸드</a>
+              </li>
+              <li>
+                <a href="#" title="">상품</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" title="뉴스">NEWS<i class="fas fa-angle-down"></i></a>
+            <ul class="sub">
+              <li>
+                <a href="#" title="">공지사항</a>
+              </li>
+              <li>
+                <a href="#" title="">이벤트</a>
+              </li>
+              <li>
+                <a href="#" title="">파스쿠찌 Talk</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" title="스토어">STORE<i class="fas fa-angle-down"></i></a>
+            <ul class="sub">
+              <li>
+                <a href="#" title="">매장안내</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" title="고객">CUSTOMER<i class="fas fa-angle-down"></i></a>
+            <ul class="sub">
+              <li>
+                <a href="#" title="">제휴안내</a>
+              </li>
+              <li>
+                <a href="#" title="">자주하는질문</a>
+              </li>
+              <li>
+                <a href="#" title="">1:1문의하기</a>
+              </li>
+              <li>
+                <a href="#" title="">채용안내</a>
+              </li>
+              <li>
+                <a href="#" title="">가맹사업안내</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </form>
+
+      <div class="sns">
+        <ul>
+          <li>
+            <a href="#" title="인스타그램">
+              <img src="./images/sns_insta.png" alt="인스타그램">
+            </a>
+          </li>
+          <li>
+            <a href="#" title="유튜브">
+              <img src="./images/sns_youtube.png" alt="유튜브">
+            </a>
+          </li>
+          <li>
+            <a href="#" title="해피콘">
+              <img src="./images/sns_happy.png" alt="해피콘">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 메인 -->
+  <main>
+    <!-- 1. 메인 슬라이드 -->
+    <section class="slide">
+      <h2>메인배너</h2>
+      <div class="swiper mainSlide">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide first-slide">
+            <h3>23 PASCUCCI</h3>
+            <p>23주년 기념 파스쿠찌</p>
+            <img src="./images/slide01.jpg" alt="23 PASCUCCI">
+          </div>
+          <div class="swiper-slide">
+            <h3>BRAND VISION</h3>
+            <p>당신의 일상에 이탈리아의 감각을 실현하게 하다.</p>
+            <img src="./images/slide02.jpg" alt="BRAND VISION">
+          </div>
+          <div class="swiper-slide">
+            <h3>BRAND HERITAGE</h3>
+            <p>이탈리아의 감각을 담은 파스쿠찌</p>
+            <img src="./images/slide03.jpg" alt="BRAND HERITAGE">
+          </div>
+        </div>
+
+        <!-- 콘트롤 버튼 -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- 2. 파스쿠찌 신제품 소개 -->
+    <section class="new-product">
+      <h2 class="main-title">PASCUCCI’S <span>NEW</span></h2>
+      <p class="main-desc">스토리를 마시는 일상, 파스쿠찌</p>
+      <ul class="list">
+        <li>
+          <a href="#" title="카라멜 골든 젤라또 라떼 제품보기">
+            <img src="./images/new_item01.jpg" alt="카라멜 골든 젤라또 라떼">
+            <dl>
+              <dt>카라멜 골든 젤라또 라떼</dt>
+              <dd>Caramel Golden Gelato Latte</dd>
+            </dl>
+          </a>
+        </li>
+        <li>
+          <a href="#" title="카라멜 골든 라떼 제품보기">
+            <img src="./images/new_item02.jpg" alt="카라멜 골든 라떼">
+            <dl>
+              <dt>카라멜 골든 라떼</dt>
+              <dd>Caramel Golden Latte</dd>
+            </dl>
+          </a>
+        </li>
+        <li>
+          <a href="#" title="카라멜 골든 그라나따 제품보기">
+            <img src="./images/new_item03.jpg" alt="카라멜 골든 그라나따">
+            <dl>
+              <dt>카라멜 골든 그라나따</dt>
+              <dd>Caramel Golden Granita</dd>
+            </dl>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 3. 브랜드 해리티지 -->
+    <section class="brand-heritage">
+      <h2 class="main-title">BRAND HERITAGE</h2>
+      <p class="main-desc">
+        파스쿠찌는 141년 전통을 이어가며 <br>
+        새로운 감각을 만듭니다. <br>
+        <br>
+        오늘도 자신의 스타일로 살아가는 <br>
+        당신에게 파스쿠찌는 이탈리아의 정수를 담아 삶에 <br>
+        세련된 감각을 더하고자 합니다.
+      </p>
+      <a href="#" title="자세히 보기" class="main-btn">자세히 보기</a>
+    </section>
+
+    <!-- 4. 이벤트 -->
+    <section class="event">
+      <h2 class="main-title">PASCUCCI’S <span>EVENT</span></h2>
+      <p class="main-desc">특별한 혜택으로 즐기는 파스쿠찌 경험</p>
+      <img src="./images/event_banner01.jpg" alt="이벤트 배너" class="event-img">
+      <p class="desc">해피포인트 페스티벌! 포인트 사용시 50% OFF</p>
+      <span class="date">2025.09.22 ~ 2025.09.30</span>
+      <a href="#" title="더보기" class="main-btn">더보기</a>
+    </section>
+
+    <!-- 5. 브랜드 스토리  -->
+    <section class="brand-stroy">
+      <a href="#" title="BRAND STORY 바로가기">
+        <h2 class="main-title">BRAND STORY</h2>
+        <p class="desc">이탈리아의 감각을 담은 파스쿠찌</p>
+      </a>
+    </section>
+
+    <!-- 6. 스토어 -->
+    <section class="store">
+      <h2 class="main-title">STORE</h2>
+      <p class="main-desc">신규 오픈점을 소개합니다.</p>
+      <form name="store" method="post" action="./store.php">
+        <div class="search-box">
+          <input type="search" id="search-store" placeholder="매장 검색">
+          <label for="search-store"><i class="fas fa-search"></i></label>
+        </div>
+        <ul class="list">
+          <li>
+            <a href="#" title="에스프레소 바 해운대 엘시티점">
+              <dl>
+                <dt>에스프레소 바</dt>
+                <dd>해운대 엘시티점</dd>
+              </dl>
+            </a>
+          </li>
+          <li>
+            <a href="#" title="에스프레소 양재점">
+              <dl>
+                <dt>에스프레소 바</dt>
+                <dd>양재점</dd>
+              </dl>
+            </a>
+          </li>
+        </ul>
+      </form>
+    </section>
+
+    <!-- 7. 인스타그램 -->
+    <section class="insta">
+      <h2>
+        <img src="./images/insta_icon.jpg" alt="인스타그램 아이콘">
+        <img src="./images/insta_title.jpg" alt="인스타그램">
+      </h2>
+      <ul class="list">
+        <li>
+          <a href="#">
+            <img src="./images/gallery01.jpg" alt="갤러리1">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./images/gallery02.jpg" alt="갤러리2">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./images/gallery03.jpg" alt="갤러리3">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./images/gallery04.jpg" alt="갤러리4">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./images/gallery05.jpg" alt="갤러리5">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./images/gallery06.jpg" alt="갤러리6">
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <a href="#" class="top">
+      <i class="fa-solid fa-chevron-up"></i>
+      TOP
+    </a>
+  </main>
+
+  <!-- 푸터 -->
+  <footer>
+    <p>
+      <a href="../index.html?move_pc_screen" title="PC버전보기" class="pc_btn">pc버전보기</a>
+    </p>
+
+    <dl>
+      <dt>고객 상담센터</dt>
+      <dd><a href="tel:000-0000-0000">000-0000-0000</a></dd>
+      <!-- <dd><a href="sms:000-0000-0000">000-0000-0000</a></dd> -->
+    </dl>
+
+    <label for="sel">선택창</label>
+    <select onChange="siteUrl(this)" id="sel">
+      <option value="">Family Site</option>
+      <option value="https://www.paris.co.kr/">파리바게뜨</option>
+      <option value="https://www.dunkindonuts.co.kr/">던킨도너츠</option>
+      <option value="https://www.baskinrobbins.co.kr/">베스킨라빈스</option>
+      <option value="http://www.shakeshack.kr/">쉐이크쉑</option>
+    </select>
+
+    <nav>
+      <ul>
+        <li><a href="#" title="해피포인트">해피포인트</a></li>
+        <li><a href="#" title="개인정보처리방침">개인정보처리방침</a></li>
+        <li><a href="#" title="안전보건경영방침">안전보건경영방침</a></li>
+        <li><a href="#" title="윤리신고센터">윤리신고센터</a></li>
+      </ul>
+    </nav>
+
+    <address>
+      (주)파리그라상 &#10072; 파스쿠찌 &#10072; 대표자 : 000 사업자등록번호 : 000-00-000 서울시 0000 000 00-00
+    </address>
+    <p class="copyright">all rights reserved&copy;2025 the pascucci, paris croissant co. ltd.</p>
+  </footer>
+
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script src="./js/main.js"></script>
+  <script>
+    var swiper = new Swiper(".mainSlide", {
+      slidesPerView: 1, // 1장씩 보이게
+      spaceBetween: 0, // 슬라이드 간격조정
+      loop: true, // 슬라이드 이미지 무한 반복으로 돌리기
+      pagination: {
+        el: ".swiper-pagination", //콘트롤 버튼 나오게
+        clickable: true, //콘트롤 버튼 클릭 가능하게
+      },
+      autoplay: { //자동으로 움직이기
+        delay: 3000, //시간설정
+        disableOnInteraction: false, //기본값으로 사용자가 터치시 자동재생이 멈추도록 해야함.
+      },
+      // navigation: {
+      //   nextEl: ".swiper-button-next",
+      //   prevEl: ".swiper-button-prev",
+      // },
+    });
+  </script>
+</body>
+
+</html>

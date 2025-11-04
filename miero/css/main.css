@@ -1,0 +1,466 @@
+@charset "UTF-8";
+/* 변수 */
+/* mixin */
+/* main */
+main .inner {
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  padding: 105px 10px;
+  box-sizing: border-box;
+}
+main .main-sub-title {
+  font-size: 18px;
+}
+main .main-title {
+  font-size: 45px;
+  font-weight: bold;
+}
+
+/* visual */
+.visual {
+  height: 750px;
+}
+.visual .visual-swiper {
+  height: 100%;
+}
+.visual .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.visual .swiper-button-next,
+.visual .swiper-button-prev {
+  width: 40px;
+  padding: 10px;
+  background: #ccc;
+  color: #333;
+  box-sizing: border-box;
+  top: auto;
+  bottom: 150px;
+  right: auto;
+  margin: auto;
+}
+.visual .swiper-button-prev {
+  left: 50px;
+}
+.visual .swiper-button-next {
+  left: 100px;
+}
+.visual .swiper-pagination {
+  bottom: auto;
+  left: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 50px;
+  width: auto;
+}
+.visual .swiper-pagination-bullet {
+  display: block;
+  margin: 10px 0 !important;
+}
+.visual .swiper-pagination-bullet-active {
+  background: #ffc845;
+}
+
+/* miero-youtube */
+.miero-youtube .inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+.miero-youtube .youtube {
+  width: 60%;
+}
+.miero-youtube .youtube .main-title {
+  width: 280px;
+  margin-bottom: 10px;
+}
+.miero-youtube .youtube .main-title img {
+  width: 100%;
+}
+.miero-youtube .youtube .box {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+}
+.miero-youtube .youtube .box iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.miero-youtube .news {
+  width: calc(40% - 20px);
+}
+.miero-youtube .news .main-title {
+  margin-bottom: 20px;
+}
+.miero-youtube .news .list li {
+  position: relative;
+  margin: 5px 0;
+}
+.miero-youtube .news .list li::before {
+  content: "O";
+  margin-right: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #f36f21;
+}
+.miero-youtube .news .list li a {
+  font-size: 15px;
+}
+
+/* dietary-fiber */
+.dietary-fiber {
+  background: #f1f1f1;
+}
+.dietary-fiber .main-title {
+  margin-bottom: 20px;
+}
+.dietary-fiber .tab-title {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.dietary-fiber .tab-title li button {
+  padding: 10px 20px;
+  background: #333;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+.dietary-fiber .tab-title li.act button {
+  background: #f36f21;
+}
+.dietary-fiber .tab-con > li {
+  display: none;
+  justify-content: center;
+  align-items: flex-start;
+}
+.dietary-fiber .tab-con > li.act {
+  display: flex;
+}
+.dietary-fiber .tab-con > li .txt-box {
+  width: 50%;
+}
+.dietary-fiber .tab-con > li .txt-box .tab-title {
+  font-size: 28px;
+  font-weight: bold;
+}
+.dietary-fiber .tab-con > li .txt-box p {
+  font-size: 16px;
+  line-height: 1.8;
+}
+.dietary-fiber .tab-con > li .txt-box ul li ~ li {
+  border-top: 1px solid #ccc;
+}
+.dietary-fiber .tab-con > li .txt-box ul li img {
+  width: 100%;
+}
+.dietary-fiber .tab-con > li .txt-box span {
+  display: block;
+  margin-top: 30px;
+  color: #999;
+  font-size: 12px;
+}
+.dietary-fiber .tab-con > li .txt-box span ~ span {
+  margin-top: 5px;
+}
+.dietary-fiber .tab-con > li > img {
+  width: 50%;
+}
+
+/* miero-fiber */
+.miero-fiber {
+  background: #ffc845;
+}
+.miero-fiber .main-title {
+  margin-bottom: 20px;
+}
+.miero-fiber .list {
+  display: flex;
+  gap: 1%;
+}
+.miero-fiber .list li {
+  width: 33%;
+}
+.miero-fiber .list li img {
+  width: 100%;
+}
+.miero-fiber .list li h3 {
+  height: 95px;
+  padding: 20px 0;
+  font-size: 27px;
+  font-weight: 500;
+  border-bottom: 1px solid #f36f21;
+  box-sizing: border-box;
+}
+.miero-fiber .list li p {
+  padding: 20px 0;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* miero-event */
+.miero-event {
+  overflow: hidden;
+}
+.miero-event .main-title {
+  margin-bottom: 20px;
+}
+.miero-event .swiper-slide a {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.miero-event .swiper-slide .img {
+  width: 65%;
+}
+.miero-event .swiper-slide .img img {
+  width: 100%;
+}
+.miero-event .swiper-slide .txt {
+  width: calc(35% - 20px);
+  padding-top: 50px;
+}
+.miero-event .swiper-slide .tag {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 3px;
+  background: #ccc;
+  color: #333;
+  border-radius: 2px;
+}
+.miero-event .swiper-slide .tit {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.miero-event .swiper-button-next,
+.miero-event .swiper-button-prev {
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: #333;
+}
+.miero-event .swiper-button-prev {
+  left: -40px;
+}
+.miero-event .swiper-button-next {
+  right: -40px;
+}
+
+/* miero-story */
+.miero-story {
+  background: #f36f21;
+}
+.miero-story .main-title {
+  color: #fff;
+  margin-bottom: 20px;
+}
+.miero-story ul {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 20px;
+  margin-bottom: 20px;
+}
+.miero-story ul li {
+  position: relative;
+  overflow: hidden;
+}
+.miero-story ul li.item02 {
+  grid-column: 2/3;
+  grid-row: 1/3;
+}
+.miero-story ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.miero-story ul li:hover a figure figcaption {
+  bottom: 0;
+  opacity: 1;
+}
+.miero-story figure {
+  width: 100%;
+  height: 100%;
+}
+.miero-story figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.miero-story figure figcaption {
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  bottom: -100px;
+  transition: 0.5s;
+  opacity: 0;
+}
+.miero-story figure figcaption h3 {
+  color: #f36f21;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.miero-story figure figcaption span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+}
+.miero-story .more-box {
+  text-align: center;
+}
+.miero-story .more-box .more-btn {
+  padding: 6px 20px;
+  background: #fff;
+  color: #333;
+  font-size: 14px;
+  border-radius: 10px;
+}
+.miero-story #list {
+  margin: 30px 0;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+  /* main */
+  main .inner {
+    padding: 80px 10px;
+  }
+  /* miero-youtube */
+  .miero-youtube .inner {
+    display: block;
+  }
+  .miero-youtube .youtube,
+  .miero-youtube .news {
+    width: 80%;
+    margin: auto;
+  }
+  .miero-youtube .youtube {
+    margin-bottom: 20px;
+  }
+  /* miero-fiber */
+  .miero-fiber {
+    width: 100%;
+  }
+  .miero-fiber .inner {
+    width: 80%;
+  }
+  .miero-fiber .list {
+    display: block;
+  }
+  .miero-fiber .list li h3 {
+    height: auto;
+  }
+  /* dietary-fiber */
+  .dietary-fiber .inner {
+    width: 80%;
+    margin: auto;
+  }
+  .dietary-fiber .tab-con > li {
+    flex-wrap: wrap;
+  }
+  .dietary-fiber .tab-con > li .txt-box {
+    width: 100%;
+  }
+  .dietary-fiber .tab-con > li > img {
+    width: 100%;
+  }
+  /* miero-event */
+  .miero-event .inner {
+    width: 80%;
+  }
+  .miero-event .swiper-slide a {
+    display: block;
+  }
+  .miero-event .swiper-slide .img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .miero-event .swiper-slide .txt {
+    width: 100%;
+    padding-top: 0;
+  }
+  .miero-event .swiper-button-prev {
+    left: 0;
+  }
+  .miero-event .swiper-button-next {
+    right: 0;
+  }
+  /* miero-story */
+  .miero-story .inner {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* main */
+  main .inner {
+    padding: 50px 10px;
+  }
+  /* miero-youtube */
+  .miero-youtube .inner {
+    display: block;
+  }
+  .miero-youtube .youtube,
+  .miero-youtube .news {
+    width: 100%;
+  }
+  .miero-youtube .youtube {
+    margin-bottom: 20px;
+  }
+  /* miero-fiber */
+  .miero-fiber .list {
+    display: block;
+  }
+  .miero-fiber .list li {
+    width: 100%;
+  }
+  .miero-fiber .list li h3 {
+    height: auto;
+  }
+  /* dietary-fiber */
+  .dietary-fiber .tab-con > li {
+    flex-wrap: wrap;
+  }
+  .dietary-fiber .tab-con > li .txt-box {
+    width: 100%;
+  }
+  .dietary-fiber .tab-con > li > img {
+    width: 100%;
+  }
+  /* miero-event */
+  .miero-event .swiper-slide a {
+    display: block;
+  }
+  .miero-event .swiper-slide .img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .miero-event .swiper-slide .txt {
+    width: 100%;
+    padding-top: 0;
+  }
+  .miero-event .swiper-button-prev {
+    left: 0;
+  }
+  .miero-event .swiper-button-next {
+    right: 0;
+  }
+  /* miero-story */
+  .miero-story ul {
+    display: block;
+  }
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* 인코딩 언어셋을 선언-문서의 호환성을 위해 넣어줌 */
+
+h3 {
+  color: #ff0000;
+}
+
+p {
+  background-color: #ccc;
+}

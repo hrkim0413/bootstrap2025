@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>03 css 선택자_링크 반응 선택자</title>
+  <style>
+    a:link {
+      color: #333;
+      text-decoration: none;
+    }
+
+    a:visited {
+      /* 메뉴 링크를 한번 이상 클릭한 적 있을 때 적용 */
+      color: #333;
+    }
+
+    a {
+      /* 위의 두 내용을 합해서 이렇게 작성할 수 있음 */
+      color: #333;
+      text-decoration: none;
+    }
+
+    /* 반응 선택자 */
+    nav>a {
+      border: 1px solid #333;
+      padding: 4px 10px;
+      border-radius: 20px;
+      transition: 0.3s;
+    }
+
+    /* 사용자가 마우스로 a 태그에 올렸을 경우 적용되는 서식 */
+    nav>a:hover,
+    nav .btn_gray {
+      background: #333;
+      color: #fff;
+    }
+
+    nav .btn_gray:hover {
+      background: transparent;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>03 css 선택자_링크 반응 선택자</h2>
+  <h3>1. 링크 선택자 - :link, :visited</h3>
+  <p>href 속성을 가진 태그 요소(a), img, 다른 요소에 서식을 적용하기 위한 선택자</p>
+  <p>선택자 앞에 ':' 기호가 들어가는 이러한 선택자를 '가상 클래스'라고 한다.</p>
+  <ul>
+    <li>:link - 링크가 걸린 상태의 요소를 선택하여 서식을 적용</li>
+    <li>:visited - 링크가 걸린 요소를 한번 이상 클릭한 적 있는 경우 서식 적용</li>
+  </ul>
+  <a href="http://naver.com" title="네이버 바로가기">네이버 바로가기</a>
+  <a href="http://daum.net" title="다음 바로가기">다음 바로가기</a>
+
+  <h3>2. 반응 선택자 - :hover, :active</h3>
+  <ul>
+    <li>:hover - 사용자가 마우스로 해당하는 요소에 올렸을 경우 서식을 적용</li>
+    <li>:active - 사용자가 마우스로 해당하는 요소를 클릭하고 있는 경우 서식을 적용</li>
+  </ul>
+
+  <nav>
+    <a href="#" title="매작픽업">매작픽업</a>
+    <a href="#" title="장바구니">장바구니</a>
+    <a href="#" title="구매하기" class="btn_gray">구매하기</a>
+    <a href="#" title="회원가입">회원가입</a>
+    <a href="#" title="로그인" class="btn_gray">로그인</a>
+  </nav>
+</body>
+
+</html>

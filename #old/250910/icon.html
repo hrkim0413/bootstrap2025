@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>아이콘 실습예제</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      color: #333;
+      font-size: 14px;
+      text-decoration: none;
+      list-style: none;
+      border: none;
+      background: none;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .icons {
+      display: flex;
+      align-items: center;
+    }
+
+    .icons .btns {
+      display: flex;
+      margin-right: 10px;
+    }
+
+    .icons .btns li {
+      border: 1px solid #ccc;
+      margin-left: -1px;
+      transition: 0.3s;
+    }
+
+    .icons .btns li:first-child {
+      margin: 0;
+    }
+
+    .icons .btns li a,
+    .icons .btns li button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px;
+      cursor: pointer;
+    }
+
+    .icons .btn {
+      display: block;
+      padding: 5px 10px;
+      border-radius: 5px;
+      color: #fff;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .icons .btn i {
+      margin-right: 5px;
+      color: inherit;
+    }
+
+    .icons .btn-twitter {
+      background-color: #65c0e4;
+      margin-right: 30px;
+    }
+
+    .icons .btn-like {
+      background-color: #083597;
+    }
+
+    /* hover */
+    .icons .btns li:hover {
+      background: #ccc;
+    }
+
+    .icons .btn-twitter:hover {
+      background-color: rgb(20, 147, 197);
+    }
+
+    .icons .btn-like:hover {
+      background-color: #0b50e6;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="icons">
+    <ul class="btns">
+      <li><a href="#" title="메일로 보내기"><i class="fa-regular fa-envelope"></i></a></li>
+      <li><button><i class="fa-solid fa-print"></i></button></li>
+    </ul>
+    <a href="#" title="트위터로 이동" class="btn btn-twitter"><i class="fa-brands fa-twitter"></i>트윗</a>
+    <button class="btn btn-like"><i class="fa-solid fa-thumbs-up"></i>좋아요 0개</button>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>13 인라인 프레임</title>
+</head>
+<body>
+  <h2>13 인라인 프레임</h2>
+  <p>인라인 프레임(아이프레임)이란? 문서 안에 또 다른 문서를 삽입하기 위한 태그 요소이며 회원가입 시 나오는 페이지의 '약관 내용', '회사 소개 페이지의 실시간 지도', '유튜브의 영상 삽입' 등 원하는 페이지를 삽입하여 하나의 문서처럼 보이게 할 수 있다.</p>
+  <p>작성법) iframe src='삽입하고자 하는 문서명 또는 주소(경로)'</p>
+
+  <h3>1. 현재 문서 안에 다른 html 문서 삽입하기</h3>
+  <iframe src="../250822/10-이미지 맵(map).html" width="100%" height="340" frameborder="0"></iframe>
+
+  <h3>2. 서브웨이 이용약관</h3>
+  <iframe src="./이용약관.html" width="500" height="150"></iframe>
+
+  <h3>3. 구글지도 api 서비스 삽입하기</h3>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.3783723766464!2d126.98726217632354!3d37.5697070239457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca3b0f3555dcf%3A0xcf3a6287d91801d6!2z6re466aw7Lu07ZOo7YSw7JWE7Yq47ZWZ7JuQIOyiheuhnOygkCDsnoXtlZnsspg!5e0!3m2!1sko!2skr!4v1756102345754!5m2!1sko!2skr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+  <h3>4. 유튜브 영상</h3>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/qb17TexmrWU?si=Ml_6GgC4_lnFjssB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <p>영상을 홈페이지 올릴 때는 직접 가지고 있는 영상 파일을 video 태그를 활용하여 업로드 할 것인지, 유튜브에 업로드하여 iframe으로 삽입할 것인지를 고민하고 사용할 것.</p>
+</body>
+</html>

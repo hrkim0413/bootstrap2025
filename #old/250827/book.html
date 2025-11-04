@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>보노보노처럼 살다니 다행이야</title>
+  <style>
+    /* 기본서식 */
+    body {
+      font-family: '맑은 고딕', arial, sans-serif;
+      font-size: 12px;
+      color: #333;
+    }
+
+    h2,
+    p {
+      margin: 0;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .wrap {
+      display: flex;
+      gap: 33px;
+    }
+
+    .top {
+      padding-bottom: 26px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .top .list {
+      display: flex;
+      gap: 5px;
+      margin-bottom: 5px;
+    }
+
+    .top .list .item {
+      padding: 2px 5px;
+      border: 1px solid #aaa;
+      font-size: 11px;
+    }
+
+    .top .list .item01 {
+      background-color: #20b2ed;
+      color: #fff;
+    }
+
+    .top .title {
+      margin-bottom: 5px;
+      color: #2320ed;
+    }
+
+    .top>p {
+      margin-bottom: 5px;
+    }
+
+    .top .review .star {
+      color: #c22e2e;
+    }
+
+    .top .review .tag {
+      padding: 2px 5px;
+      border: 1px solid #ddd;
+      color: #20b2ed;
+      font-size: 10px;
+      transition: 0.3s
+    }
+
+    .top .review .tag:hover {
+      background-color: #20b2ed;
+      color: #fff;
+    }
+
+    .top .best-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .top .best-box .best .color {
+      color: #c22e2e;
+    }
+
+    .bottom {
+      padding-top: 24px;
+    }
+
+    .bottom .list .item {
+      margin-bottom: 12px;
+    }
+
+    .bottom .list .item:last-child {
+      margin-bottom: 20px;
+    }
+
+    .bottom .list .item .price {
+      font-weight: 700;
+    }
+
+    .bottom .list .item .price01 {
+      font-size: 20px;
+      color: #c22e2e;
+    }
+
+    .bottom .list .item .price02 {
+      font-size: 16px;
+      color: #2320ed;
+    }
+
+    .bottom .list .item .card {
+      padding: 2px 5px;
+      border: 1px solid #ddd;
+      transition: 0.3s;
+    }
+
+    .bottom .list .item .card:hover {
+      background-color: #ddd;
+    }
+
+    .bottom .place {
+      padding: 5px 45px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #c22e2e;
+      font-size: 14px;
+      border: 1px solid #ddd;
+      transition: 0.3s;
+    }
+
+    .bottom .place:hover {
+      background-color: #c22e2e;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="left">
+      <img src="./images/book.jpg" alt="보노보노처럼 살다니 다행이야 책 표지">
+    </div>
+
+    <div class="right">
+      <div class="top">
+        <ul class="list">
+          <li class="item item01">오늘의 책</li>
+          <li class="item item02">이벤트</li>
+          <li class="item item02">무료배송</li>
+        </ul>
+        <h2 class="title">보노보노처럼 살다니 다행이야(특별판)</h2>
+        <p class="writer">김신회 지음 | 이가라시 미카오 그림 | 놀 | 2017년 04월 06일 출간</p>
+        <p class="review">
+          <span class="star">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span>
+          리뷰 82개
+          <a href="#" class="tag" title="리뷰쓰기">리뷰쓰기</a>
+        </p>
+        <div class="best-box">
+          <p class="best">국내도서 주간베스트 <span class="color">13</span>위 | 시/에세이 주간 베스트 <span class="color">4</span>위</p>
+          <select>
+            <option value="opt01">주요 일간지 북센션 추천도서</option>
+            <option value="opt02">주요 일간지 북센션 추천도서1</option>
+            <option value="opt03">주요 일간지 북센션 추천도서2</option>
+            <option value="opt04">주요 일간지 북센션 추천도서3</option>
+          </select>
+        </div>
+      </div>
+      <div class="bottom">
+        <ul class="list">
+          <li class="item">정가 : 16,000원</li>
+          <li class="item">판매가 : <span class="price price01">14,400원</span>[10&#x0025; &#x2193; <b>1,600</b>원 할인]</li>
+          <li class="item">
+            제휴할인가 : <span class="price price02">13,680원</span>교보-KB국민카드 5&#x0025; 청구할인(실적무관)
+            <a href="#" class="card" title="카드/포인트 안내">카드/포인트 안내</a>
+          </li>
+          <li class="item">통합포인트 : <b>800</b>원 적립 [5&#x0025; 적립]</li>
+        </ul>
+        <a href="#" class="place" title="영업점 재고&#x00B7;위치">영업점 재고&#x00B7;위치 &#x003E;</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+/* 변수 */
+$colorBlack: #333;
+$colorWhite: #fff;
+$colorGray: #ccc;
+$colorMain: #f36f21;
+$colorSub: #ffc845;
+$fontSizeBase: 14px;
+$fontSizeM: 17px;
+$inner: 1200px;
+
+/* mixin */
+@mixin inner() {
+  max-width: $inner;
+  width: 100%;
+}

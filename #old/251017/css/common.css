@@ -1,0 +1,207 @@
+@charset "utf-8";
+
+/* 사파리 브라우저에서 가로 방향으로 돌리면 글자가 확대되는 문제 해결하기 */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* pc, tablet, mobile 공통서식 */
+body {
+  font-family: "Nanum Gothic", '맑은 고딕', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.81rem;
+  /* 0.81rem = 81% = 13px */
+  color: #333;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* input */
+input {
+  border: 1px solid transparent;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* pc버전에서 숨김 */
+#toggle_btn,
+header #t_btn,
+header #m_search,
+.gnb_wrap label[for="toggle_btn"],
+.gnb_wrap .gnb li a .fas {
+  display: none;
+}
+
+/* header */
+header {
+  width: 100%;
+  height: calc(72px + 40px);
+}
+
+header .header_inner {
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
+  height: 72px;
+  margin: 0 auto;
+}
+
+header h1 {
+  width: 196px;
+  transform: translateY(20px);
+}
+
+header h1 a img {
+  width: 100%;
+}
+
+header .lnb {
+  position: absolute;
+  top: 14px;
+  right: 10px;
+}
+
+header .lnb ul {
+  display: flex;
+}
+
+header .lnb ul li {
+  position: relative;
+}
+
+header .lnb ul li a {
+  text-transform: uppercase;
+  font-size: 13px;
+  border-right: 1px solid #ccc;
+  padding: 0 8px;
+  line-height: 22px;
+}
+
+header .lnb ul li:nth-child(6) a {
+  border-right: none;
+}
+
+header .lnb ul li a:hover {
+  text-decoration: underline;
+}
+
+header .lnb ul li input {
+  height: 24px;
+  padding: 0 20px;
+  border-bottom-color: #ccc;
+  text-align: center;
+}
+
+header .lnb ul li label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  font-size: 18px;
+}
+
+/* gnb */
+.gnb_wrap {
+  overflow: hidden;
+  width: 100%;
+  height: 40px;
+  /* 마우스 오버시 높이 260으로 변경 */
+  background: rgba(255, 255, 255, 0.9);
+  transition: 0.5s;
+  position: absolute;
+  z-index: 100;
+}
+
+.gnb_wrap .gnb {
+  display: flex;
+  justify-content: right;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.gnb_wrap .gnb>li {
+  position: relative;
+  margin: 0 3.4%;
+  text-align: center;
+}
+
+.gnb_wrap .gnb>li>a {
+  display: block;
+  padding: 0 6px;
+  font-size: 16px;
+  line-height: 40px;
+}
+
+.gnb_wrap .gnb>li>a:hover {
+  color: #f90;
+}
+
+.gnb_wrap .gnb>li>a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: #f90;
+  transform: translateY(-3px) scale(0);
+  transition: 0.3s;
+}
+
+.gnb_wrap .gnb>li>a:hover::after {
+  transform: translateY(-3px) scale(1);
+}
+
+.gnb_wrap .gnb li .sub li a {
+  display: block;
+  line-height: 42px;
+  font-size: 14px;
+}
+
+.gnb_wrap .gnb li .sub li a:hover {
+  text-decoration: underline;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  padding: 10px 0;
+  background: rgb(241, 241, 241);
+  border-top: 1px solid #bdbdbd;
+}
+
+footer .f_inner {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+footer .f_lnb ul {
+  display: flex;
+  justify-content: left;
+}
+
+footer .f_lnb ul li {
+  margin: 0 10px;
+}
+
+footer .f_lnb ul li a {
+  line-height: 160%;
+}
+
+footer .sns ul {
+  display: flex;
+  justify-content: right;
+}
+
+footer .sns li {
+  margin: 0 2px;
+}
+
+footer address p {
+  line-height: 28px;
+}

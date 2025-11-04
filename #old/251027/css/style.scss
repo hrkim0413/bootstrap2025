@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+$myFont: "맑은 고딕", arial, sans-serif;
+$b_color_w: #fff;
+$b_font_color: #333;
+$b_font_size: 12px;
+$big_font_size: 30px;
+$txt_align_c: center;
+$b_width: 1200px;
+$a_center: 0 auto;
+$border_1: 1px solid $b_Color_w;
+
+body {
+  font-family: $myFont;
+  color: $b_font_color;
+  font-size: $b_font_size;
+}
+
+header,
+main,
+footer {
+  width: $b_width;
+  margin: $a_center;
+}
+
+/* 헤더 */
+header {
+  text-align: $txt_align_c;
+  background: yellow;
+}
+
+header h1 {
+  font-size: $big_font_size;
+}
+
+/* 메인 */
+main {
+  background: green;
+  height: 400px;
+}
+
+/* 푸터 */
+footer {
+  background: $b_font_color;
+  text-align: $txt_align_c;
+}
+
+footer address {
+  color: $b_color_w;
+  line-height: 40px;
+  font-style: normal;
+}

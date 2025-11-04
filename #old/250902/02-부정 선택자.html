@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02 부정 선택자</title>
+  <style>
+    .list_box li:not(.list) {
+      border: 1px solid #00f;
+      color: #00f;
+    }
+
+    .con01 :not(h3) {
+      background-color: yellow;
+    }
+
+    /* 페이지네이션 */
+    * {
+      box-sizing: border-box;
+    }
+
+    .page_navi {
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      background-color: beige;
+    }
+
+    .page_navi li a {
+      text-decoration: none;
+      color: #333;
+      display: block;
+      padding: 5px 10px;
+    }
+
+    .page_navi li a:hover {
+      background-color: #ccc;
+    }
+
+    .act {
+      border: 2px solid #333;
+      color: #00f;
+      background: #fff;
+      padding: 5px 10px;
+    }
+
+    .page_navi li a:not(.act):focus {
+      color: #f00;
+      padding: 5px 10px;
+      border: 1px solid #000;
+      background-color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>02 부정 선택자</h2>
+  <p>부정선택자는 가상클래스(:)선택자로서 사용자가 선택한 요소를 제외한 나머지를 선택하고자 할 때 사용하는 선택자이다.</p>
+  <p>:not - 선택한 요소를 제외한 나머지를 선택</p>
+  <p>작성법) 선택자:not(선택자) {속성:값;}</p>
+  <ul class="list_box">
+    <li class="list">:link</li>
+    <li class="list">:visited</li>
+    <li class="list">:hover</li>
+    <li class="list">:active</li>
+    <li>:not</li>
+  </ul>
+
+  <div class="con01">
+    <h3>제목요소</h3>
+    <p>문단요소</p>
+  </div>
+
+  <!-- 페이지네이션 -->
+  <h3>페이지네이션</h3>
+  <p>게시판 페이지 번호 목록을 만들고 사용자가 선택한 페이지가 아닌 다른 번호는 서식을 제거</p>
+  <p>
+    a요소에 #속성값을 넣으면 클릭시 화면이 새로고침되어 페이지 상단으로 이동이 되는데 이것을 막기 위해 javascript기능을 추가하여 새로고침이 안되도록 막는다 <br>
+    onclick="return false"
+    href="javascript:void(0);"
+    href="javascript:;"
+    onclick="e.preventdefault();"
+  </p>
+  <ol class="page_navi">
+    <li><a href="#" onclick="return false" title="1페이지로 이동">1</a></li>
+    <li><a href="javascript:void(0);" title="2페이지로 이동">2</a></li>
+    <li><a href="javascript:void(0);" title="3페이지로 이동">3</a></li>
+    <li><a href="javascript:void(0);" title="4페이지로 이동">4</a></li>
+    <li><a href="javascript:void(0);" title="5페이지로 이동">5</a></li>
+    <li><a href="javascript:void(0);" title="6페이지로 이동">6</a></li>
+    <li><a href="javascript:void(0);" title="7페이지로 이동">7</a></li>
+    <li><a href="javascript:void(0);" title="8페이지로 이동">8</a></li>
+    <li><a href="javascript:void(0);" title="9페이지로 이동">9</a></li>
+    <li><a href="javascript:void(0);" title="10페이지로 이동">10</a></li>
+    <li><a href="javascript:void(0);" title="다음페이지로 이동">다음 &gt;</a></li>
+  </ol>
+</body>
+
+</html>

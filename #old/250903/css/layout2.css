@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+/* layout2.css */
+header,
+main,
+footer {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+header {
+  height: 120px;
+  background: #ff8888;
+}
+
+main {
+  background: #fff017;
+  display: flex;
+  /* 2차원 배치 방식 */
+}
+
+section {
+  width: 800px;
+  height: 500px;
+  background: #55bd48;
+  /* float: left; */
+}
+
+article {
+  width: 640px;
+  height: 400px;
+  background: #c53faf;
+  /* float: right; */
+}
+
+footer {
+  /* clear: both; */
+  /* 플로트 속성 해제 */
+  height: 60px;
+  background: #333;
+  color: #fff;
+}

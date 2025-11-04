@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>파스쿠찌-랜딩페이지 구현</title>
+  <!-- 파비콘 연결하기 -->
+  <!-- <link rel="shortcut icon" type="image/x-icon" href="./images/favicon_48.ico" /> -->
+  <link rel="shortcut icon" type="image/x-icon" href="./images/favicon_16.ico" />
+
+  <!-- 1. css초기화 -->
+  <link href="./css/reset.css" rel="stylesheet" type="text/css">
+  <!-- 2. 아이콘 - 폰트어썸 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- 3. 스와이퍼 슬라이드 라이브러리 -->
+  <link href="./css/swiper-bundle.min.css" rel="stylesheet" type="text/css">
+  <!-- 4. 공통서식 - 글자모양, 크기, 색상, 레이아웃 -->
+  <link href="./css/common.css" rel="stylesheet" type="text/css">
+  <!-- 5. 메인 콘텐츠 서식 -->
+  <link href="./css/main.css" rel="stylesheet" type="text/css">
+  <style>
+    /* html, body{
+      scroll-behavior: smooth;
+    } */
+  </style>
+</head>
+<body>
+  <form name="form" method="post" action="./search.php">
+    <!-- 상단 헤더영역 시작 -->
+    <header id="header">
+      <!-- sns영역 -->
+      <div class="h_top">
+        <ul>
+          <li>
+            <a href="#" title="인스타그램 바로가기"><i class="fa-brands fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="#" title="유튜브 바로가기"><i class="fa-brands fa-youtube"></i></a>
+          </li>
+          <li>
+            <a href="#" title="해피포인트 바로가기"><img src="./images/ico_happycon.png" alt="해피포인트" class="happy_con"></a>
+          </li>
+        </ul>
+      </div>
+
+      <div id="h_bottom">
+        <h1>
+          <a href="index.html" title="메인페이지로 바로가기">
+            <img src="./images/logo.png" alt="상단로고">
+          </a>
+        </h1>
+
+        <!-- 메인메뉴 -->
+        <nav id="gnb">
+          <ul>
+            <li>
+              <a href="#cont1" title="에스프레소바">ESPRESSO BAR</a>
+              <ul class="sub">
+                <li><a href="#" title="에스프레소바">ESPRESSO BAR</a></li>
+                <li><a href="#" title="센트로">CENTRO</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#cont2" title="파스쿠찌">PASCUCCI</a>
+              <ul class="sub">
+                <li><a href="#" title="브랜드 소개">브랜드 소개</a></li>
+                <li><a href="#" title="커피&amp;컬처">커피&amp;컬처</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#cont3" title="메뉴">MENU</a>
+              <ul class="sub">
+                <li><a href="#" title="커피">COFFEE</a></li>
+                <li><a href="#" title="음료">BEVERAGE</a></li>
+                <li><a href="#" title="아이스크림">GELATO</a></li>
+                <li><a href="#" title="베이커리">FOOD</a></li>
+                <li><a href="#" title="MD">MD</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#cont4" title="새소식">NEWS</a>
+              <ul class="sub">
+                <li><a href="#" title="공지사항">공지사항</a></li>
+                <li><a href="#" title="이벤트">이벤트</a></li>
+                <li><a href="#" title="파스쿠찌TALK">파스쿠찌TALK</a></li>
+                <li><a href="#" title="홍보센터">홍보센터</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#cont5" title="고객지원">CUSTOMER</a>
+              <ul class="sub">
+                <li><a href="#" title="제휴안내">제휴안내</a></li>
+                <li><a href="#" title="자주하는 질문">자주하는 질문</a></li>
+                <li><a href="#" title="1:1 문의">1:1 문의</a></li>
+                <li><a href="#" title="가맹사업안내">가맹사업안내</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- 검색박스 -->
+        <fieldset id="search_box">
+          <input type="search" placeholder="오늘의 행사" id="search">
+          <label for="search"><i class="fas fa-search"></i></label>
+        </fieldset>
+
+        <nav class="gnb_etc">
+          <ul>
+            <li>
+              <a href="#" title="마이페이지 바로가기">
+                <i class="fa-solid fa-user"></i>
+              </a>
+            </li>
+            <li>
+              <select name="lang" id="lang">
+                <option value="KOREAN">KOREAN</option>
+                <option value="ENGLISH">ENGLISH</option>
+                <option value="CHINESE">CHINESE</option>
+                <option value="JAPANESE">JAPANESE</option>
+              </select>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- 메인 콘텐츠 시작 -->
+    <main>
+      <!-- 1. 메인 슬라이드 영역 -->
+      <article class="main_visual">
+        <h2>메인 슬라이드</h2>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./images/main_slide01.jpg" alt="슬라이드1">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/main_slide02.jpg" alt="슬라이드2">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/main_slide03.jpg" alt="슬라이드3">
+            </div>
+          </div>
+
+          <!-- 좌, 우버튼 -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+
+          <!-- 콘트롤버튼 -->
+          <div class="swiper-pagination">
+            <span class="swiper-pagination-bullet"></span>
+            <span class="swiper-pagination-bullet"></span>
+            <span class="swiper-pagination-bullet"></span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2. -->
+      <section id="cont1">
+        화면스크롤시 상단 헤더영역의 내비게이션 글자색상이 안보이는 문제점이 생김(흰색글자)
+        => .black_bg 클래스명을 세로 스크롤값이 일정부분 내려갔을 경우 header에 서식 적용 하도록하고 스크롤이 어느 정도 올라왔을 경우 다시 .black_bg를 제거한다.
+      </section>
+
+      <!-- 3.  -->
+      <section id="cont2">
+
+      </section>
+
+      <!-- 4.  -->
+      <section id="cont3">
+
+      </section>
+
+      <!-- 5.  -->
+      <section id="cont4">
+
+      </section>
+
+      <!-- 6.  -->
+      <section id="cont5">
+
+      </section>
+    </main>
+
+    <!-- 푸터영역 시작 -->
+    <footer>
+      <!-- 푸터 상단영역 -->
+      <div class="f_top">
+        <ul class="f_top_l">
+          <li><a href="#" title="기업 및 단체구매">기업 및 단체구매</a></li>
+          <li><a href="#" title="협력제안">협력제안</a></li>
+          <li><a href="#" title="가맹상담">가맹상담</a></li>
+          <li><a href="#" title="사이버신문고">사이버신문고</a></li>
+        </ul>
+        
+        <dl class="f_top_r">
+          <dt>Address</dt>
+          <dd><address>경기도 00시 00구 0000로 00번길 00 (주) 파0크0상</address></dd>
+          <dt>고객상담센터</dt>
+          <dd>080 - 000 - 2024</dd>
+        </dl>
+
+        <select name="siteurl" id="url" onchange="siteUrl(a)">
+          <option value="#none">패밀리 사이트 바로가기</option>
+          <option value="https://www.baskinrobbins.co.kr">베스킨라빈스31</option>
+          <option value="https://www.dunkindonuts.co.kr/">던킨도너츠</option>
+          <option value="https://pariscroissantorder.com/">파리크라상</option>
+          <option value="https://www.happyconstore.com/">해피콘</option>
+          <option value="https://www.spc.co.kr/">SPC 그룹</option>
+        </select>
+      </div>
+
+      <!-- 푸터하단영역 -->
+      <div class="f_bottom">
+        <h2>
+          <a href="index.html" title="처음으로 바로가기">
+            <img src="./images/logo.png" alt="하단로고">
+          </a>
+        </h2>
+
+        <ul>
+          <li><a href="#" title="이용약관">이용약관</a></li>
+          <li><a href="#" title="개인정보처리방침">개인정보처리방침</a></li>
+          <li><a href="#" title="해피포인트">해피포인트</a></li>
+          <li><a href="#" title="거래희망사건등록">거래희망사건등록</a></li>
+          <li>사업자등록번호 :  0000-00-0000000</li>
+        </ul>
+
+        <p>allrights reserved&copy; 2025 the pascucci, paris croissant co., ltd</p>
+      </div>
+    </footer>
+  </form>
+
+  <!-- 스와이퍼 슬라이드 -->
+  <script src="./script/swiper-bundle.min.js"></script>
+  <!-- 스와이퍼 스크립트 -->
+  <script>
+    //0. gnb에 마우스 오버시 배경색 적용하기
+    const gnb = document.getElementById('gnb');
+    const header = document.getElementById('header');
+    const scroll = header.offsetTop;
+
+    //gnb에 마우스 오버시 배경색 적용하기
+    gnb.addEventListener('mouseenter', function(){
+      //헤더변수에 해당 서식을 적용한다.
+      header.classList.add('black_bg');
+    });
+
+    //gnb에 마우스 아웃시 배경색 제거하기
+    gnb.addEventListener('mouseleave', function(){
+      //헤더변수에 해당 서식을 제거한다.
+      header.classList.remove('black_bg');
+    });
+
+    //1. 메인 슬라이드 이미지
+    var swiper = new Swiper('.mySwiper', {
+      cssMode:true,
+      loop:true,
+      autoplay:{
+        delay:3000,
+        disableOnInteraction:false,
+      },
+      navigation:{
+        nextEl:".swiper-button-next",
+        prevEl:".swiper-button-prev",
+      },
+      pagination:{
+        el:".swiper-pagination",
+        clickable:'true',
+      },
+    });
+
+    //2. 화면스크롤시 .black_bg적용하기 / 제거하기
+    // 변수선언
+    let docElem = document.documentElement, offset, scrollPos, docHeight;
+    
+    docHeight = Math.max(docElem.offsetHeight, docElem.scrollHeight);
+
+    if(docHeight!=0){
+      offset=docHeight/12;
+    }
+
+    //화면 스크롤시 세로 스크롤값을 출력해보기
+    window.addEventListener('scroll', function(){
+      scrollPos = docElem.scrollTop;
+      console.log(scrollPos);
+
+      if(scrollPos>=10){ 
+        header.classList.add('black_bg');
+        header.addEventListener('mouseleave', function(){
+          header.classList.add('black_bg');
+        });
+      }else{ //스크롤 높이가 그 밖에 높이가 되면 아래 서식을 적용(높이가 10이하)
+        header.addEventListener('mouseleave', function(){
+          header.classList.remove('black_bg');
+        });
+        header.classList.remove('black_bg');; //스크롤 높이가 10이상인 경우에서 헤더 배경색을 제거
+      }
+    });
+    
+    //3. 메인메뉴 클릭시 해당 아이디 박스요소가 스크롤 되면서 상단으로 올라오게 하기
+    const menuLinks = document.querySelectorAll('#gnb > ul > li > a');
+
+    //반복문을 사용하여 각 링크에 이벤트를 적용하여 해당 섹션으로 이동하게 하기
+    //for(초기값;조건식;증감식){실행문}
+    for(let i=0;i<menuLinks.length;i++){
+      //클릭이벤트
+      menuLinks[i].addEventListener('click', function(e){
+        console.log(i);//0,1,2,3,4
+        e.preventDefault(); //기본 이벤트 클릭을 제거한다. (새로고침이 안되도록)
+
+        //href값(#con1, #con2, #con3, #con4, #con5)으로 이동할 section을 찾는다.
+        // 속성값을 변수에 담는다.
+        const targetId = this.getAttribute('href').substring(1);
+
+        //위에 저장된 변수값을 id값으로 저장
+        const targetSection = document.getElementById(targetId);
+
+        //id값 출력해보기
+        console.log(targetSection); //section출력
+
+        const headerHeight = 130; //헤더 영역 높이만큼 값 설정
+
+        //각 선택한 section이 부드럽게 상단으로 올라오게 하기
+        window.scrollTo({
+          top:targetSection.offsetTop-headerHeight, //section상단 위치와 브라우저 상단과 동일한 위치로 이동
+          behavior:'smooth' //부드럽게 이동한다.
+        });
+      });
+    }
+  </script>
+</body>
+</html>

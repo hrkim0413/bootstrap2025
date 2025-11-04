@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10 이미지 맵(map)</title>
+</head>
+<body>
+  <h2>10 이미지 맵(map)</h2>
+  <p>이미지맵이란? 하나의 이미지에 여러 개의 맵(사각형, 원형, 다각형)을 만들어서 링크를 걸 수 있는 기능.</p>
+  <p>작성법) map name="맵이름", area shape='reet, circle, polyon' cords='좌표값'</p>
+  <!-- https://www.image-map.net/ -->
+
+  <img src="./images/total_book.jpg" usemap="#image-map">
+
+  <map name="image-map">
+    <area target="" alt="네이버 페이지로 바로가기" title="네이버 페이지로 바로가기" href="https://www.naver.com/" coords="16,17,108,149" shape="rect">
+    <area target="" alt="다음 페이지로 바로가기" title="다음 페이지로 바로가기" href="https://www.daum.net" coords="139,17,231,148" shape="rect">
+    <area target="" alt="yes24 페이지로 바로가기" title="yes24 페이지로 바로가기" href="https://www.yes24.com/" coords="261,17,352,147" shape="rect">
+    <area target="" alt="교보문고 페이지로 바로가기" title="교보문고 페이지로 바로가기" href="https://product.kyobobook.co.kr/detail/S000001913217" coords="383,18,474,147" shape="rect">
+  </map>
+</body>
+</html>

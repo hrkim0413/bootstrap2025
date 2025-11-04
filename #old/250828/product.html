@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실습예제_쿠팡 여성패션</title>
+  <style>
+    /* reset */
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: '맑은 고딕', arial, sans-serif;
+      font-size: 13px;
+      color: #333;
+    }
+
+    a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    /* add */
+    .cate01 {
+      border-top: 2px solid #f6699e;
+      border-bottom: 1px solid #ccc;
+      width: 470px;
+      height: 549px;
+      position: relative;
+    }
+
+    .cate01>h3 {
+      font-size: 28px;
+      color: #f6699e;
+      padding: 10px 0 0 10px;
+    }
+
+    .link {
+      font-size: 11px;
+      padding-left: 12px;
+      line-height: 30px;
+    }
+
+    dl {
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+    }
+
+    dl>dt {
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    dl dd~dd {
+      margin-top: 10px;
+    }
+
+    dl dd a {
+      display: inline-block;
+      padding: 5px;
+      border: 1px solid #ddd;
+      color: #f6699e;
+      font-size: 12px;
+    }
+
+    dl dd a:hover {
+      background: #f6699e;
+      color: #fff;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cate01">
+    <h3>여성패션</h3>
+    <a href="#" title="여성패션 바로가기 &gt;" class="link">바로가기 &gt;</a>
+
+    <dl>
+      <dt>hot키워드</dt>
+      <dd><a href="#" title="카디건 바로가기">&#x0023;카디건</a></dd>
+      <dd><a href="#" title="원피스 바로가기">&#x0023;원피스</a></dd>
+      <dd><a href="#" title="청바지 바로가기">&#x0023;청바지</a></dd>
+      <dd><a href="#" title="크로스백 바로가기">&#x0023;크로스백</a></dd>
+      <dd><a href="#" title="운동화 바로가기">&#x0023;운동화</a></dd>
+      <dd><a href="#" title="잠옷 바로가기">&#x0023;잠옷</a></dd>
+    </dl>
+
+    <a href="#" title="여성패션 바로가기">
+      <img src="./images/product.jpg" alt="BAG ACC 스타일링 특가. 선글라스 / 모자 / 시계 외">
+    </a>
+  </div>
+</body>
+
+</html>

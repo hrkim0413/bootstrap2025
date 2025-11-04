@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+$margin: 10px;
+$padding: 14px;
+$r_color: #f00;
+
+.list {
+  h3 {
+    color: #333;
+    padding: $padding;
+    margin: $margin;
+    border: 1px solid #f00;
+
+    font: {
+      family: '궁서체';
+      size: 30px;
+      weight: bold;
+      style: italic;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    >li {
+      list-style: none;
+      margin: 10px 0;
+      padding: 1px;
+      border: 1px solid #ccc;
+      line-height: 40px;
+
+      >a {
+        color: #333;
+        text-decoration: none;
+        display: block;
+
+        &:hover {
+          background: yellow;
+        }
+      }
+    }
+  }
+}
+
+// 탭콘텐츠 서식
+$a_act: #0081a1;
+$t_align_c: center;
+$t_mnu_height: 280px;
+
+article {
+  width: 500px;
+  border: 1px solid $a_act;
+
+  h3 {
+    display: none;
+  }
+
+  .tab {
+    display: flex;
+    justify-content: space-between;
+
+    .tabcon {
+      width: 60%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    ul {
+      width: 35%;
+      margin: 0;
+      padding: 0;
+      // height: $t_mnu_height;
+
+      li {
+        list-style: none;
+        height: 25%;
+        text-align: $t_align_c;
+
+        a {
+          color: #333;
+          text-decoration: none;
+          // line-height: 70px;
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          font-size: 12px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        &.act a {
+          background: $a_act;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

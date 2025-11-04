@@ -1,0 +1,107 @@
+div {
+  height: 50px;
+  margin-bottom: 10px;
+  background: pink;
+}
+
+// 1부터 5까지 반복실행
+// @for $i from 1 to 6 {
+//   div:nth-of-type(#{$i}) {
+//     width: 50px*$i;
+//   }
+// }
+
+@for $i from 1 through 5 {
+  div:nth-of-type(#{$i}) {
+    width: 100px*$i;
+  }
+}
+
+.qna {
+  padding: 10px;
+  border: 3px solid #000;
+
+  * {
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+
+  h3 {
+    margin-bottom: 30px;
+    font-size: 30px;
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  .searchbox {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #eee;
+
+    input {
+      padding: 3px;
+    }
+
+    label {
+      display: block;
+      padding: 2px 10px;
+      background: #333;
+      color: #fff;
+      border-radius: 5px;
+    }
+  }
+
+  dl {
+    border: 1px solid #000;
+    border-left: none;
+    border-right: none;
+
+    dt,
+    dd {
+      padding: 15px 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    dt {
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+
+      &::after {
+        content: '\f078';
+        font-family: "Font Awesome 7 Free";
+        font-weight: 900;
+        display: block;
+      }
+
+      &.act::after {
+        transform: rotate(180deg);
+      }
+    }
+
+    dd {
+      display: none;
+
+      &.act {
+        display: block;
+      }
+    }
+
+    @for $i from 1 through 11 {
+      dt:nth-of-type(#{$i}) {
+        color: #006633;
+      }
+
+      dd:nth-of-type(#{$i}) {
+        background: #eee;
+      }
+    }
+  }
+}

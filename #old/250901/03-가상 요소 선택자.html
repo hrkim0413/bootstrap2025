@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>03 가상 요소 선택자</title>
+  <style>
+    article {
+      width: 600px;
+      border: 3px solid #333;
+    }
+
+    article h3::before {
+      content: '\2665';
+      color: #f00;
+    }
+
+    article h3::after {
+      content: '\2666';
+      color: #00f;
+    }
+
+    /* 문단의 첫줄에만 서식을 적용 */
+    article p::first-line {
+      text-decoration: underline;
+    }
+
+    /* 문단의 첫줄의 첫 단어에만 서식을 적용 */
+    article p::first-letter {
+      background-color: #ff0;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    /* 스타벅스 */
+    footer {
+      background-color: #333;
+    }
+
+    nav {}
+
+    nav ul {}
+
+    nav ul li {
+      list-style: none;
+      display: inline;
+    }
+
+    nav ul li::after {
+      content: '\2758';
+      color: #fff;
+      padding-left: 8px;
+    }
+
+    nav ul li:last-child:after {
+      display: none;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>03 가상 요소 선택자</h2>
+  <p>css level3에서 추가된 선택자로서 가상 클래스(:)와가상 요소 선택자(::)가 있다.</p>
+  <p>가상 클래스는 사용자의 행동이나 시스템의 상태 등 외부적인 요인에 의해서 웹브라우저에서 html 문서와 특정 태그들을 발생할 수 있는 특정한 상태를 css표준으로 정의해 놓은 것을 말하며, 대표적인
+    가상클래스는 :link, :visited, :hover, :active, :checked, :focus, :enabled, :disabled가 있다.</p>
+
+  <p>가상 요소는 태그 내용의 특정 부분은 css표준으로 미리 지정한 것을 말하며 대표적인 가상 요소에는 :first-letter, ::first-line, ::before, ::after 등이 있다. 가상
+    요소는 특정 부분에만 서식을 적용하기 위한 요소로서 '::' 기호를 사용한다.</p>
+
+  <h3>가상 요소 선택자</h3>
+  <ul>
+    <li>::first-letter - 문단의 첫줄에 첫글자만 선택</li>
+    <li>::first-line - 문단의 첫출을 선택</li>
+    <li>::before - 사용자가 선택한 요소의 앞쪽을 선택</li>
+    <li>::after - 사용자가 선택한 요소의 뒷쪽을 선택</li>
+  </ul>
+
+  <!-- div는 의미없는 박스 영역을 만들지만, article은 의미있는 영역을 만들 때 사용 -->
+  <article>
+    <h3>반도체 역대 최고 실적에 수출 3개월째 플러스…관세 탓 대미 수출 '고전'(종합2보)</h3>
+    <p>[세종=뉴시스]김동현 여동준 기자 = 미국 정부의 관세 영향에도 반도체 수출이 사상 최대 수출액을 기록한 것에 힘입어 3개월 연속 수출 플러스(+)를 기록했다. 무역수지도 7개월 연속 흑자를 달성하는 등
+      호조세를 이어갔다.
+
+      반도체는 고대역폭메모리(HBM)와 더블데이터레이트(DDR)5 등 고부가 메모리 반도체 수요가 견조한 것에 힘입어 사상 최대 수출액을 2개월 만에 경신했다. 자동차는 미국의 25% 품목별 관세 부과에도
+      3개월 연속 수출 증가세를 보였다.</p>
+  </article>
+
+  <!-- 스타벅스 메인페이지 하단 푸터 -->
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="#" title="">menu</a></li>
+        <li><a href="#" title="">menu</a></li>
+        <li><a href="#" title="">menu</a></li>
+        <li><a href="#" title="">menu</a></li>
+        <li><a href="#" title="">menu</a></li>
+        <li><a href="#" title="">menu</a></li>
+        <li><a href="#" title="">menu</a></li>
+        <li><a href="#" title="">menu</a></li>
+        <li><a href="#" title="">menu</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+
+</html>

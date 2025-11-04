@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+$width1: 1200px;
+$width2: 1024px;
+$width3: 390px;
+$width4: 768px;
+
+@mixin box {
+  height: 50px;
+  border: 3px solid #000;
+  margin-bottom: 20px;
+}
+
+div {
+  @include box();
+}
+
+.pc {
+  width: $width1;
+  background: if($width1>500, pink, lightblue);
+}
+
+.tablet {
+  width: $width2;
+  background: if($width2>500, pink, lightblue);
+}
+
+.mobile {
+  width: $width3;
+  background: if($width3>500, pink, lightblue);
+}
+
+.box03 {
+  width: $width4;
+
+  @if($width4>=767) {
+    background: pink;
+  }
+
+  @else {
+    background: lightblue;
+  }
+}
+
+.box04 {
+  width: $width2;
+
+  @if($width2>=1024) {
+    background: yellow;
+  }
+
+  @else {
+    background: gray;
+  }
+}

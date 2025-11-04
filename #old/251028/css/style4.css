@@ -1,0 +1,157 @@
+div {
+  height: 50px;
+  margin-bottom: 10px;
+  background: pink;
+}
+
+div:nth-of-type(1) {
+  width: 100px;
+}
+
+div:nth-of-type(2) {
+  width: 200px;
+}
+
+div:nth-of-type(3) {
+  width: 300px;
+}
+
+div:nth-of-type(4) {
+  width: 400px;
+}
+
+div:nth-of-type(5) {
+  width: 500px;
+}
+
+.qna {
+  padding: 10px;
+  border: 3px solid #000;
+}
+.qna * {
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+.qna h3 {
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+.qna p {
+  margin-bottom: 10px;
+}
+.qna .searchbox {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #eee;
+}
+.qna .searchbox input {
+  padding: 3px;
+}
+.qna .searchbox label {
+  display: block;
+  padding: 2px 10px;
+  background: #333;
+  color: #fff;
+  border-radius: 5px;
+}
+.qna dl {
+  border: 1px solid #000;
+  border-left: none;
+  border-right: none;
+}
+.qna dl dt,
+.qna dl dd {
+  padding: 15px 10px;
+  border-bottom: 1px solid #ccc;
+}
+.qna dl dt {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.qna dl dt::after {
+  content: "\f078";
+  font-family: "Font Awesome 7 Free";
+  font-weight: 900;
+  display: block;
+}
+.qna dl dt.act::after {
+  transform: rotate(180deg);
+}
+.qna dl dd {
+  display: none;
+}
+.qna dl dd.act {
+  display: block;
+}
+.qna dl dt:nth-of-type(1) {
+  color: #006633;
+}
+.qna dl dd:nth-of-type(1) {
+  background: #eee;
+}
+.qna dl dt:nth-of-type(2) {
+  color: #006633;
+}
+.qna dl dd:nth-of-type(2) {
+  background: #eee;
+}
+.qna dl dt:nth-of-type(3) {
+  color: #006633;
+}
+.qna dl dd:nth-of-type(3) {
+  background: #eee;
+}
+.qna dl dt:nth-of-type(4) {
+  color: #006633;
+}
+.qna dl dd:nth-of-type(4) {
+  background: #eee;
+}
+.qna dl dt:nth-of-type(5) {
+  color: #006633;
+}
+.qna dl dd:nth-of-type(5) {
+  background: #eee;
+}
+.qna dl dt:nth-of-type(6) {
+  color: #006633;
+}
+.qna dl dd:nth-of-type(6) {
+  background: #eee;
+}
+.qna dl dt:nth-of-type(7) {
+  color: #006633;
+}
+.qna dl dd:nth-of-type(7) {
+  background: #eee;
+}
+.qna dl dt:nth-of-type(8) {
+  color: #006633;
+}
+.qna dl dd:nth-of-type(8) {
+  background: #eee;
+}
+.qna dl dt:nth-of-type(9) {
+  color: #006633;
+}
+.qna dl dd:nth-of-type(9) {
+  background: #eee;
+}
+.qna dl dt:nth-of-type(10) {
+  color: #006633;
+}
+.qna dl dd:nth-of-type(10) {
+  background: #eee;
+}
+.qna dl dt:nth-of-type(11) {
+  color: #006633;
+}
+.qna dl dd:nth-of-type(11) {
+  background: #eee;
+}/*# sourceMappingURL=style4.css.map */

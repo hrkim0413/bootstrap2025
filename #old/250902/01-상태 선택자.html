@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01 상태 선택자</title>
+  <!-- 폰트어썸 아이콘 폰트 CDN 주소 연결 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+  <style>
+    input[type] {
+      background-color: #ccc;
+      border: none;
+    }
+
+    input[type="text"]:focus {
+      background-color: #ff0;
+    }
+
+    input[type="password"]:focus {
+      background-color: #0f0;
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    input[type="checkbox"]:checked+i {
+      color: #f00;
+    }
+
+    .btn01:disabled {
+      background-color: #f6d7d7;
+      color: #f00;
+    }
+
+    input[type="button"]:enabled {
+      background-color: #fff;
+      border: 1px solid #00f;
+      background-color: #00f;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>01 상태 선택자</h2>
+  <ul>
+    <li>:checked - 양식을 체크한 상태</li>
+    <li>:focus - 초점이 맞추어진 상태</li>
+    <li>:enabled - 사용이 가능한 요소를 선택</li>
+    <li>:disabled - 사용이 불가능한 요소를 선택</li>
+  </ul>
+
+  <p>노랑풍선 '여행지 검색 양식', 'id, pw 입력 양식'을 클릭시 테두리 색상 변경됨 => focus(초점)</p>
+  <p>노랑풍선 로그인 폼 양식 아래 '아이디 저장' 체크박스 클릭시 아래 내용 나오거나 숨기기, cjmall 고객센터 - 질문과 답변 top10, 모바일 토글버튼 클릭시 내비게이션 나오거나/숨기기, 본인인증
+    페이지에서 약관동의시 버튼 색상 변경 가능하게 할 수 있음 => checked</p>
+
+  <form name="" method="get/post" action="">
+    <fieldset>
+      <legend>로그인 폼</legend>
+      <p>
+        <label for="id_txt">아이디 : </label>
+        <input type="text" id="id_txt" maxlength="16">
+      </p>
+      <p>
+        <label for="pw_txt">패스워드 : </label>
+        <input type="password" class="pw_txt" maxlength="16">
+      </p>
+
+      <p>
+        <input type="checkbox" id="id_save">
+        <i class="fa-regular fa-circle-check"></i>
+        <label for="id_save">아이디 저장</label>
+      </p>
+
+      <input type="submit" value="로그인" id="login_btn">
+    </fieldset>
+
+    <input type="button" value="예매가능">
+    <input type="button" value="예매불가능" disabled>
+    <input type="button" value="품절" class="btn01" disabled>
+  </form>
+
+  <p>폰트어썸 cdn - https://cdnjs.com/libraries/font-awesome</p>
+</body>
+
+</html>

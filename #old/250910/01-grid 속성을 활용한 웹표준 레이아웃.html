@@ -1,0 +1,91 @@
+*html*
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01-grid 속성을 활용한 웹표준 레이아웃</title>
+  <!-- 초기화 -->
+  <link rel="stylesheet" href="./css/reset.css" type="text/css">
+  <!-- grid layout 서식 -->
+  <link rel="stylesheet" href="./css/layout.css" type="text/css">
+</head>
+
+<body>
+  <!-- wrap, container -->
+  <div id="container">
+    <!-- 상단 헤더 영역 시작 -->
+    <header>상단 헤더 - 높이(80)</header>
+    <nav>웹 내비게이션 - 가로(100), 높이(600)</nav>
+
+    <!-- 메인 콘텐츠 영역 시작 -->
+    <section>section 영역 - 가로(690), 높이(500)</section>
+    <article>article 영역 - 가로(215), 높이(500)</article>
+
+    <!-- 푸터 영역 시작 -->
+    <footer>푸터 영역 - 높이(80)</footer>
+  </div>
+</body>
+
+</html>
+
+*css*
+@charset "utf-8";
+
+/* grid 레이아웃 */
+#container {
+  width: 1024px;
+  margin: auto;
+  background-color: yellow;
+  display: grid;
+  grid-gap: 10px;
+  /* grid-template-rows: repeat(3, auto);
+  grid-template-columns: repeat(12, auto); */
+  grid-template-areas:
+    "header header header header header header"
+    "nav section section section article article"
+    "nav footer footer footer footer footer";
+}
+
+/* 헤더 서식 */
+header {
+  background-color: #333;
+  color: #fff;
+  line-height: 80px;
+  /* grid-area: 1/1/2/13; */
+  grid-area: header;
+}
+
+nav {
+  background-color: antiquewhite;
+  width: 100px;
+  height: 600px;
+  /* grid-area: 2/1/4/2; */
+  grid-area: nav;
+}
+
+section {
+  width: 690px;
+  height: 500px;
+  background-color: aquamarine;
+  /* grid-area: 2/2/3/9; */
+  grid-area: section;
+}
+
+article {
+  width: 215px;
+  height: 500px;
+  background-color: blueviolet;
+  /* grid-area: 2/9/3/13; */
+  grid-area: article;
+}
+
+footer {
+  line-height: 80px;
+  background-color: #333;
+  color: #fff;
+  /* grid-area: 3/2/4/13; */
+  grid-area: footer;
+}

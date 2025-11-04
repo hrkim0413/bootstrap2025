@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02 css 선택자_자손 후손 선택자</title>
+  <style>
+    a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .wrap a {
+      border: 1px solid #f00;
+      padding: 4px 80px;
+    }
+
+    header>a {
+      color: #00f;
+    }
+
+    main>a {
+      background: #ff0;
+    }
+
+    footer>a {
+      background: #000;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>02 css 선택자_자손 후손 선택자</h2>
+  <p>html 태그는 부모 요소와 자손 요소의 개념으로 작성이 되는데, 부모 요서의 바로 아래 자손 요소를 선택하고자 할 때 '자손 선택자', 부모 요소의 아래 자손 요소를 모두 선택하고자 할 때는 '후손
+    선택자'를 사용한다.</p>
+  <p>작성법) 자손선택자 : A 선택자 > B 선택자 또는 후손 선택자 : A 선택자 B 선택자</p>
+
+  <div class="wrap">
+    <header>
+      <a href="#" title="메뉴">메뉴</a>
+    </header>
+
+    <main>
+      <a href="#" title="메뉴">메뉴</a>
+    </main>
+
+    <footer>
+      <a href="#" title="메뉴">메뉴</a>
+    </footer>
+  </div>
+</body>
+
+</html>
